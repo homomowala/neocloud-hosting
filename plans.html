@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NEOCLOUD Plans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      font-family: sans-serif;
+    }
+    h1, h2 {
+      font-family: 'Press Start 2P', monospace;
+    }
+    .glow {
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    }
+    .plan {
+      border: 2px solid #ff00ff;
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: transform 0.3s;
+    }
+    .plan:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff00ff;
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <header class="flex justify-between items-center p-6">
+    <img src="logo.png" alt="NEOCLOUD Logo" class="h-12">
+    <div class="text-xl text-purple-400 font-bold">NEOCLOUD</div>
+    <nav class="space-x-6 text-lg">
+      <a href="index.html" class="hover:text-pink-400">Home</a>
+      <a href="tools.html" class="hover:text-pink-400">Tools</a>
+    </nav>
+  </header>
+
+  <section class="text-center py-10">
+    <h1 class="text-3xl glow mb-8">MC Server Hosting Plans</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="plan"><h2>PLAN 1</h2><p>2GB RAM • 80% CPU • 5GB DISK — ₹40</p></div>
+      <div class="plan"><h2>PLAN 2</h2><p>4GB RAM • 120% CPU • 10GB DISK — ₹80</p></div>
+      <div class="plan"><h2>PLAN 3</h2><p>6GB RAM • 150% CPU • 15GB DISK — ₹120</p></div>
+      <div class="plan"><h2>PLAN 4</h2><p>8GB RAM • 200% CPU • 20GB DISK — ₹160</p></div>
+      <div class="plan"><h2>PLAN 6</h2><p>10GB RAM • 250% CPU • 22GB DISK — ₹250</p></div>
+      <div class="plan"><h2>PLAN 7</h2><p>12GB RAM • 300% CPU • 25GB DISK — ₹350</p></div>
+      <div class="plan"><h2>PLAN 8</h2><p>16GB RAM • 350% CPU • 30GB DISK — ₹450</p></div>
+      <div class="plan"><h2>PLAN 9</h2><p>∞ RAM • ∞ CPU • ∞ DISK — ₹999</p></div>
+    </div>
+  </section>
+
+  <footer class="text-center text-gray-400 py-8">
+    &copy; 2025 NEOCLOUD. All rights reserved.
+  </footer>
+
+</body>
+</html>
