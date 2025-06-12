@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEOCLOUD Tools</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<!-- Loading Animation -->
+<div id="loader" class="loader">
+  <div class="dual-circle"></div>
+  <p class="glow">Loading...</p>
+</div>
+
+<!-- Header -->
+<header class="glow" style="text-align:center; padding: 20px;">
+  <img src="assets/logo.png" alt="NEOCLOUD Logo" style="height: 60px;" />
+  <h1>NEOCLOUD TOOLS</h1>
+</header>
+
+<!-- Navigation -->
+<nav style="text-align:center; margin-bottom: 30px;">
+  <a href="index.html">Home</a> |
+  <a href="plans.html">Plans</a> |
+  <a href="tools.html">Tools</a>
+</nav>
+
+<!-- Tools Section -->
+<main style="padding: 20px; max-width: 900px; margin: auto;">
+  
+  <!-- MOTD Generator -->
+  <section class="tool glow" style="margin-bottom: 40px;">
+    <h2>MOTD Generator</h2>
+    <input type="text" id="motdInput" placeholder="Enter your MOTD" style="width:100%; padding:10px;"/>
+    <p style="margin-top:10px;">Preview: <span id="motdPreview"></span></p>
+  </section>
+
+  <!-- Coordinate Calculator -->
+  <section class="tool glow" style="margin-bottom: 40px;">
+    <h2>Coordinate Calculator</h2>
+    <p>Nether → Overworld: <input type="number" id="nether" placeholder="Nether X/Z" />
+    <button onclick="convertCoords()">Convert</button></p>
+    <p>Overworld → Nether: <span id="coordOutput"></span></p>
+  </section>
+
+  <!-- Enchantment Level Calculator -->
+  <section class="tool glow" style="margin-bottom: 40px;">
+    <h2>Enchantment XP Calculator</h2>
+    <input type="number" id="levelInput" placeholder="Enter Level" />
+    <button onclick="calcXP()">Calculate XP</button>
+    <p>Total XP Needed: <span id="xpOutput"></span></p>
+  </section>
+
+  <!-- Circle Generator (size to radius) -->
+  <section class="tool glow" style="margin-bottom: 40px;">
+    <h2>Circle Size Generator</h2>
+    <input type="number" id="circleRadius" placeholder="Enter Radius" />
+    <button onclick="genCircle()">Generate</button>
+    <pre id="circleOutput" style="font-size: 8px; line-height: 1;"></pre>
+  </section>
+
+  <!-- Skin Viewer -->
+  <section class="tool glow" style="margin-bottom: 40px;">
+    <h2>Minecraft Skin Viewer</h2>
+    <input type="text" id="skinUser" placeholder="Enter Username" />
+    <button onclick="showSkin()">View</button>
+    <div id="skinResult" style="margin-top:10px;"></div>
+  </section>
+
+  <!-- Tick to Time -->
+  <section class="tool glow">
+    <h2>Tick to Time Converter</h2>
+    <input type="number" id="tickInput" placeholder="Enter Ticks" />
+    <button onclick="convertTicks()">Convert</button>
+    <p>Time: <span id="tickOutput"></span></p>
+  </section>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("loader").style.display = "none";
+    }, 2000);
+  });
+
+  document.getElementById("motdInput").addEventListener("input", function () {
+    document.getElementById("motdPreview").textContent = this.value;
+  });
+
+  function convertCoords() {
+    let val = parseFloat(document.getElementById("nether").value);
+    if (!isNaN(val)) {
+      document.getElementById("coordOutput").innerText = "Overworld X/Z: " + val * 8;
+    }
+  }
+
+  function calcXP() {
+    let level = parseInt(document.getElementById("levelInput").value);
+    let xp = level < 17 ? level * level + 6 * level : (level < 32 ? 2.5 * level * level - 40.5 * level + 360 : 4.5 * level * level - 162.5 * level + 2220);
+    document.getElementById("xpOutput").textContent = Math.floor(xp);
+  }
+
+  function genCircle() {
+    const radius = parseInt(document.getElementById("circleRadius").value);
+    const output = document.getElementById("circleOutput");
+    let text = '';
+    for (let y = -radius; y <= radius; y++) {
+      for (let x = -radius; x <= radius; x++) {
+        text += (x * x + y * y <= radius * radius) ? '█' : ' ';
+      }
+      text += '\n';
+    }
+    output.textContent = text;
+  }
+
+  function showSkin() {
+    const username = document.getElementById("skinUser").value;
+    document.getElementById("skinResult").innerHTML = `<img src="https://minotar.net/armor/body/${username}/100.png" alt="${username}" />`;
+  }
+
+  function convertTicks() {
+    const ticks = parseInt(document.getElementById("tickInput").value);
+    if (!isNaN(ticks)) {
+      const seconds = ticks / 20;
+      document.getElementById("tickOutput").textContent = seconds + " seconds";
+    }
+  }
+</script>
+
+</body>
+</html>
