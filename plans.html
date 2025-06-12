@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEOCLOUD | Plans</title>
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="loader" class="loader-screen">
+    <div class="dual-loader">
+      <div class="circle outer"></div>
+      <div class="circle inner"></div>
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="plans.html">Plans</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+  </header>
+
+  <main class="plans">
+    <h2 class="arcade-glow">Minecraft Hosting Plans</h2>
+    <div class="plan-card">
+      <h3>Starter</h3>
+      <p>1 GB RAM • 1 vCPU</p>
+      <p>$3/month</p>
+    </div>
+    <div class="plan-card">
+      <h3>Standard</h3>
+      <p>2 GB RAM • 2 vCPU</p>
+      <p>$6/month</p>
+    </div>
+    <div class="plan-card">
+      <h3>Pro</h3>
+      <p>4 GB RAM • 3 vCPU</p>
+      <p>$10/month</p>
+    </div>
+  </main>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("loader").style.display = "none";
+    }, 2000);
+  </script>
+</body>
+</html>
