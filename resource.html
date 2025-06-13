@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resource Calculator</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css" />
 </head>
-<body>
-  <div class="navbar"><a href="tools.html">← Back</a></div>
-  <section class="tool-section">
-    <h1>Resource Calculator</h1>
-    <p>Enter item count to calculate resource stacks.</p>
-    <input type="number" id="items" placeholder="Total Items">
-    <button onclick="calc()">Calculate</button>
-    <p id="stacks"></p>
-  </section>
+<body class="tool-bg">
+  <header class="navbar"><img src="logo.png" class="logo" /><nav><a href="index.html">Home</a><a href="plans.html">Plans</a><a class="active" href="tools.html">Tools</a></nav></header>
+  <main class="tool-main">
+    <h1 class="tool-title">🧱 Resource Calculator</h1>
+    <p class="tool-desc">Calculate how many stacks/items you need to build structures.</p>
+    <input type="number" id="blocks" placeholder="Total Blocks" class="tool-input" />
+    <button onclick="calcResources()" class="tool-btn">Calculate</button>
+    <p id="resResult" class="tool-output"></p>
+  </main>
   <script>
-    function calc() {
-      const total = parseInt(document.getElementById("items").value);
+    function calcResources() {
+      const total = parseInt(document.getElementById("blocks").value);
       const stacks = Math.floor(total / 64);
-      const leftover = total % 64;
-      document.getElementById("stacks").innerText = `${stacks} stacks + ${leftover} items`;
+      const extra = total % 64;
+      document.getElementById("resResult").innerText = `${stacks} stacks and ${extra} items`;
     }
   </script>
 </body>
