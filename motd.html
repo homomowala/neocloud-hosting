@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MOTD Generator - NEOCLOUD</title>
-  <link rel="stylesheet" href="main.css" />
+  <meta charset="UTF-8">
+  <title>MOTD Generator</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <nav class="navbar">NEOCLOUD</nav>
-  <main class="tool">
+  <div class="navbar"><a href="tools.html">← Back</a></div>
+  <section class="tool-section">
     <h1>MOTD Generator</h1>
-    <input id="motdInput" placeholder="Enter MOTD text" />
-    <button onclick="generateMOTD()">Generate</button>
-    <p id="output"></p>
-  </main>
+    <p>Create a Minecraft MOTD with color codes.</p>
+    <textarea id="motd" placeholder="Enter MOTD here..."></textarea>
+    <button onclick="generate()">Copy with Color</button>
+    <p id="result"></p>
+  </section>
   <script>
-    function generateMOTD() {
-      const motd = document.getElementById('motdInput').value;
-      document.getElementById('output').innerText = `§a${motd.replace(/ /g, ' §r')}`;
+    function generate() {
+      const text = document.getElementById('motd').value;
+      const formatted = text.replace(/&([0-9a-fk-or])/gi, '§$1');
+      navigator.clipboard.writeText(formatted);
+      document.getElementById('result').innerText = 'Copied MOTD: ' + formatted;
     }
   </script>
 </body>
