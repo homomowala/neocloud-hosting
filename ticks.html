@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tick Calculator</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body class="tool-bg">
+  <header class="navbar"><img src="logo.png" class="logo" /><nav><a href="index.html">Home</a><a href="plans.html">Plans</a><a class="active" href="tools.html">Tools</a></nav></header>
+  <main class="tool-main">
+    <h1 class="tool-title">⏱️ Tick Calculator</h1>
+    <p class="tool-desc">Convert ticks to seconds or vice versa (20 ticks = 1 sec).</p>
+    <input type="number" id="ticks" placeholder="Ticks" class="tool-input" />
+    <button onclick="convertTicks()" class="tool-btn">Convert</button>
+    <p id="tickResult" class="tool-output"></p>
+  </main>
+  <script>
+    function convertTicks() {
+      const ticks = parseInt(document.getElementById("ticks").value);
+      document.getElementById("tickResult").innerText = `${ticks} ticks = ${(ticks / 20).toFixed(2)} seconds`;
+    }
+  </script>
+</body>
+</html>
