@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NEOCLOUD Plans</title>
   <link rel="stylesheet" href="main.css" />
 </head>
 <body>
+  <!-- Loader -->
   <div class="loader-wrapper" id="loader">
     <div class="loader"></div>
-    <div class="loader-text">Loading...</div>
+    <p class="loader-text">Loading...</p>
   </div>
 
+  <!-- Navbar -->
   <nav class="navbar">
     <img src="logo.png" alt="Logo" class="logo" />
     <ul class="nav-links">
@@ -19,40 +21,119 @@
       <li><a href="plans.html">Plans</a></li>
       <li><a href="tools.html">Tools</a></li>
     </ul>
+    <a href="https://discord.gg/" class="discord-btn" target="_blank">Join Discord</a>
   </nav>
 
+  <!-- Hero -->
+  <section class="hero">
+    <h1>⚡ NEOCLOUD CHEAP MC SERVER PLAN ⚡</h1>
+    <p>Hosted on powerful Intel Xeon hardware with unbeatable pricing.</p>
+    <h3>🖥️ Processor: Intel Xeon</h3>
+  </section>
+
+  <!-- Plans Section -->
   <section class="plans">
-    <h1>Cheap Minecraft Server Plans</h1>
-    <p>All powered by Intel Xeon CPUs and lightning-fast SSD storage.</p>
     <div class="plan-grid">
-      <!-- Repeat for all plans -->
+      <!-- Plan 1 -->
       <div class="plan-card">
         <h2>Plan 1</h2>
         <p>💾 RAM: 2GB</p>
         <p>⚙️ CPU: 80%</p>
-        <p>🗄️ Disk: 5GB</p>
-        <p>💰 40₹ INR</p>
-        <button class="btn">Buy Now</button>
-        <button class="btn-outline">Add to Cart</button>
+        <p>📁 Disk: 5GB</p>
+        <p>💸 Price: ₹40 INR</p>
+        <a class="btn" href="#">Buy Now</a>
+        <a class="btn-outline" href="#">Add to Cart</a>
       </div>
 
-      <!-- Add other plans (Plan 2 to Plan 9) similarly -->
-      <!-- You can paste rest of the plan cards here -->
+      <!-- Plan 2 -->
+      <div class="plan-card">
+        <h2>Plan 2</h2>
+        <p>💾 RAM: 4GB</p>
+        <p>⚙️ CPU: 120%</p>
+        <p>📁 Disk: 10GB</p>
+        <p>💸 Price: ₹80 INR</p>
+        <a class="btn" href="#">Buy Now</a>
+        <a class="btn-outline" href="#">Add to Cart</a>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="plan-card">
+        <h2>Plan 3</h2>
+        <p>💾 RAM: 6GB</p>
+        <p>⚙️ CPU: 150%</p>
+        <p>📁 Disk: 15GB</p>
+        <p>💸 Price: ₹120 INR</p>
+        <a class="btn" href="#">Buy Now</a>
+        <a class="btn-outline" href="#">Add to Cart</a>
+      </div>
+
+      <!-- Plan 4 -->
+      <div class="plan-card">
+        <h2>Plan 4</h2>
+        <p>💾 RAM: 8GB</p>
+        <p>⚙️ CPU: 200%</p>
+        <p>📁 Disk: 20GB</p>
+        <p>💸 Price: ₹160 INR</p>
+        <a class="btn" href="#">Buy Now</a>
+        <a class="btn-outline" href="#">Add to Cart</a>
+      </div>
+
+      <!-- Plan 6 -->
+      <div class="plan-card">
+        <h2>Plan 6</h2>
+        <p>💾 RAM: 10GB</p>
+        <p>⚙️ CPU: 250%</p>
+        <p>📁 Disk: 22GB</p>
+        <p>💸 Price: ₹250 INR</p>
+        <a class="btn" href="#">Buy Now</a>
+        <a class="btn-outline" href="#">Add to Cart</a>
+      </div>
+
+      <!-- Plan 7 -->
+      <div class="plan-card">
+        <h2>Plan 7</h2>
+        <p>💾 RAM: 12GB</p>
+        <p>⚙️ CPU: 300%</p>
+        <p>📁 Disk: 25GB</p>
+        <p>💸 Price: ₹350 INR</p>
+        <a class="btn" href="#">Buy Now</a>
+        <a class="btn-outline" href="#">Add to Cart</a>
+      </div>
+
+      <!-- Plan 8 -->
+      <div class="plan-card">
+        <h2>Plan 8</h2>
+        <p>💾 RAM: 16GB</p>
+        <p>⚙️ CPU: 350%</p>
+        <p>📁 Disk: 30GB</p>
+        <p>💸 Price: ₹450 INR</p>
+        <a class="btn" href="#">Buy Now</a>
+        <a class="btn-outline" href="#">Add to Cart</a>
+      </div>
+
+      <!-- Plan 9 -->
+      <div class="plan-card">
+        <h2>Plan 9</h2>
+        <p>💾 RAM: ∞</p>
+        <p>⚙️ CPU: ∞</p>
+        <p>📁 Disk: ∞</p>
+        <p>💸 Price: ₹999 INR</p>
+        <a class="btn" href="#">Buy Now</a>
+        <a class="btn-outline" href="#">Add to Cart</a>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 NEOCLOUD Hosting. All rights reserved.</p>
+    <p>© 2025 NEOCLOUD. All Rights Reserved.</p>
   </footer>
 
   <script>
-    window.addEventListener("load", () => {
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
       setTimeout(() => {
-        const loader = document.getElementById("loader");
-        if (loader) {
-          loader.style.opacity = "0";
-          setTimeout(() => loader.remove(), 500);
-        }
+        loader.style.opacity = '0';
+        setTimeout(() => loader.remove(), 500);
       }, 2000);
     });
   </script>
