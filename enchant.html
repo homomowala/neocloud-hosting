@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Skin Grabber</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="navbar"><a href="tools.html">← Back</a></div>
+  <section class="tool-section">
+    <h1>Skin Grabber</h1>
+    <p>Enter a Minecraft username to preview their skin.</p>
+    <input type="text" id="username" placeholder="Username">
+    <button onclick="getSkin()">Get Skin</button>
+    <div id="skinResult"></div>
+  </section>
+  <script>
+    function getSkin() {
+      const username = document.getElementById("username").value;
+      const img = `<img src="https://minotar.net/armor/body/${username}/100.png">`;
+      document.getElementById("skinResult").innerHTML = img;
+    }
+  </script>
+</body>
+</html>
