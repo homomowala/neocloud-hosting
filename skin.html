@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Skin Grabber - NEOCLOUD</title>
-  <link rel="stylesheet" href="main.css"/>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skin Grabber</title>
+  <link rel="stylesheet" href="main.css" />
 </head>
-<body>
-  <nav class="navbar">NEOCLOUD</nav>
-  <main class="tool">
-    <h1>Skin Grabber</h1>
-    <input id="username" placeholder="Minecraft Username"/>
-    <button onclick="getSkin()">Grab Skin</button>
-    <img id="skin" style="margin-top: 10px; display: block;" />
+<body class="tool-bg">
+  <header class="navbar"><img src="logo.png" class="logo" /><nav><a href="index.html">Home</a><a href="plans.html">Plans</a><a class="active" href="tools.html">Tools</a></nav></header>
+  <main class="tool-main">
+    <h1 class="tool-title">🎭 Skin Grabber</h1>
+    <p class="tool-desc">Get the Minecraft skin of any player by their username.</p>
+    <input type="text" id="username" placeholder="Username" class="tool-input" />
+    <button onclick="getSkin()" class="tool-btn">Grab Skin</button>
+    <div id="skinResult" class="tool-output"></div>
   </main>
   <script>
     function getSkin() {
-      const user = document.getElementById("username").value;
-      document.getElementById("skin").src = `https://mc-heads.net/body/${user}/300`;
+      const username = document.getElementById("username").value;
+      const img = `<img src="https://mineskin.eu/armor/body/${username}/100.png" alt="Skin" />`;
+      document.getElementById("skinResult").innerHTML = img;
     }
   </script>
 </body>
