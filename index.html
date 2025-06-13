@@ -3,24 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NEOCLOUD | Mythical Hosting</title>
-  <link rel="stylesheet" href="main.css"/>
+  <title>NEOCLOUD Hosting</title>
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
-<body>
-  <div class="loader"><div></div><div></div><p>Loading...</p></div>
-  <nav>
-    <img src="logo.png" alt="NEOCLOUD Logo" class="logo"/>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="plans.html">Plans</a></li>
-      <li><a href="tools.html">Tools</a></li>
-      <li><a href="https://discord.gg/j9nAs6WsNb" target="_blank" class="discord-btn">Join Discord</a></li>
-    </ul>
-  </nav>
-  <header>
-    <h1>Welcome to <span>NEOCLOUD</span></h1>
-    <p>The most mythical, affordable Minecraft hosting service.</p>
-    <a href="plans.html" class="btn">Explore Plans</a>
+<body class="home-bg">
+  <div class="loader-container">
+    <div class="loader-circle"></div>
+    <div class="loader-circle delay"></div>
+    <p class="loader-text">Loading...</p>
+  </div>
+
+  <header class="navbar">
+    <img src="logo.png" alt="NEOCLOUD Logo" class="logo" />
+    <nav>
+      <a class="active" href="index.html">Home</a>
+      <a href="plans.html">Plans</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+    <a class="discord-btn" href="https://discord.gg/j9nAs6WsNb" target="_blank">Join Discord</a>
   </header>
+
+  <main class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">⚡ NEOCLOUD Hosting</h1>
+      <p class="hero-subtitle">Reliable. Powerful. Mythical Minecraft Hosting.</p>
+      <p class="hero-text">
+        Welcome to NEOCLOUD — your gateway to next-gen game server hosting.<br>
+        We provide blazing fast Minecraft servers with ultra-low latency and full customization.<br>
+        Choose from a variety of flexible plans, access powerful tools, and experience mythical uptime.
+      </p>
+      <div class="hero-buttons">
+        <a href="plans.html" class="btn-glow">View Plans</a>
+        <a href="tools.html" class="btn-glow-secondary">Explore Tools</a>
+      </div>
+    </div>
+  </main>
+
+  <section class="features">
+    <h2 class="section-title">🚀 Why Choose NEOCLOUD?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>⚙️ Powered by Xeon</h3>
+        <p>All servers run on powerful Intel Xeon CPUs and NVMe SSDs for unmatched performance.</p>
+      </div>
+      <div class="feature-card">
+        <h3>📡 24/7 Uptime</h3>
+        <p>Enjoy uninterrupted gameplay with always-online servers and strong DDoS protection.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🔧 Custom Tools</h3>
+        <p>Access a full suite of Minecraft utilities like MOTD generators, map converters, and more.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🎨 Mythical UI</h3>
+        <p>Clean, animated, and mythical-themed control panels & tools to enhance your experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 NEOCLOUD Hosting. Powered by Xeon & Community Love 💜</p>
+  </footer>
+
+  <script>
+    window.onload = () => {
+      document.querySelector('.loader-container').style.display = 'none';
+    };
+  </script>
 </body>
 </html>
