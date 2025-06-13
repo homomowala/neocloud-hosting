@@ -4,117 +4,115 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NEOCLOUD Plans</title>
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="main.css">
   <style>
-    body {
-      background: linear-gradient(to bottom, #1a002d, #000);
-      color: #fff;
-      font-family: monospace;
-      padding: 2rem 1rem;
-    }
-    header {
-      background: #260042;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-    }
-    header img {
-      height: 32px;
-    }
-    nav a {
-      color: #ff9cfc;
-      margin: 0 0.8rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
+    .cart {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
       color: white;
     }
-    h1 {
-      text-align: center;
-      color: #c56aff;
-      font-size: 2.2rem;
+    .btn-small {
+      padding: 8px 16px;
+      margin: 4px;
+      font-size: 14px;
+      background-color: #7e3ff2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
     }
-    .plan {
-      background: #2c0052;
-      border-radius: 10px;
-      padding: 1rem;
-      margin: 1rem auto;
-      max-width: 600px;
-      box-shadow: 0 0 12px #c48cff44;
-    }
-    .plan h3 {
-      color: #ff98ff;
-    }
-    .plan p {
-      margin: 0.3rem 0;
-    }
-    @media (max-width: 600px) {
-      h1 { font-size: 1.6rem; }
-      .plan { margin: 1rem 0.5rem; }
+    .btn-small:hover {
+      background-color: #a176f6;
     }
   </style>
 </head>
 <body>
+  <div id="loader">
+    <div class="loader-circle"></div>
+    <div id="loader-text">Loading...</div>
+  </div>
 
-  <header>
-    <img src="logo.png" alt="NEOCLOUD Logo" />
-    <nav>
+  <div class="navbar">
+    <img src="logo.png" alt="NEOCLOUD Logo">
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="plans.html">Plans</a>
       <a href="tools.html">Tools</a>
-    </nav>
-  </header>
-
-  <h1>🟣 NEOCLOUD CHEAP MC SERVER PLAN</h1>
-  <p style="text-align:center; color:#c0a0ff;">Processor: Intel Xeon</p>
-
-  <div class="plan">
-    <h3>PLAN 1</h3>
-    <p>💾 RAM: 2GB</p>
-    <p>⚙️ CPU: 80%</p>
-    <p>📦 Disk: 5GB</p>
-    <p>💰 Price: ₹40 INR</p>
+    </div>
   </div>
 
-  <div class="plan">
-    <h3>PLAN 2</h3>
-    <p>RAM: 4GB | CPU: 120% | Disk: 10GB | Price: ₹80 INR</p>
-  </div>
+  <section class="plans">
+    <h1>NEOCLOUD Cheap Minecraft Server Plans</h1>
+    <p>Choose from affordable and powerful Minecraft hosting plans. Add to your cart or buy directly.</p>
+    <div class="plan-list" id="plansContainer">
+      <!-- Plans will be injected here -->
+    </div>
+  </section>
 
-  <div class="plan">
-    <h3>PLAN 3</h3>
-    <p>RAM: 6GB | CPU: 150% | Disk: 15GB | Price: ₹120 INR</p>
-  </div>
+  <section class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cartItems">
+      <li>No items added yet.</li>
+    </ul>
+  </section>
 
-  <div class="plan">
-    <h3>PLAN 4</h3>
-    <p>RAM: 8GB | CPU: 200% | Disk: 20GB | Price: ₹160 INR</p>
-  </div>
+  <footer>
+    <p>© 2025 NEOCLOUD. All rights reserved.</p>
+    <p><a href="index.html">Home</a> | <a href="tools.html">Tools</a></p>
+  </footer>
 
-  <div class="plan">
-    <h3>PLAN 6</h3>
-    <p>RAM: 10GB | CPU: 250% | Disk: 22GB | Price: ₹250 INR</p>
-  </div>
+  <script>
+    const plans = [
+      { name: "Plan 1", ram: "2GB", cpu: "80%", disk: "5GB", price: "₹40" },
+      { name: "Plan 2", ram: "4GB", cpu: "120%", disk: "10GB", price: "₹80" },
+      { name: "Plan 3", ram: "6GB", cpu: "150%", disk: "15GB", price: "₹120" },
+      { name: "Plan 4", ram: "8GB", cpu: "200%", disk: "20GB", price: "₹160" },
+      { name: "Plan 6", ram: "10GB", cpu: "250%", disk: "22GB", price: "₹250" },
+      { name: "Plan 7", ram: "12GB", cpu: "300%", disk: "25GB", price: "₹350" },
+      { name: "Plan 8", ram: "16GB", cpu: "350%", disk: "30GB", price: "₹450" },
+      { name: "Plan 9", ram: "∞", cpu: "∞", disk: "∞", price: "₹999" },
+    ];
 
-  <div class="plan">
-    <h3>PLAN 7</h3>
-    <p>RAM: 12GB | CPU: 300% | Disk: 25GB | Price: ₹350 INR</p>
-  </div>
+    const cart = [];
 
-  <div class="plan">
-    <h3>PLAN 8</h3>
-    <p>RAM: 16GB | CPU: 350% | Disk: 30GB | Price: ₹450 INR</p>
-  </div>
+    function updateCart() {
+      const cartItems = document.getElementById("cartItems");
+      cartItems.innerHTML = "";
 
-  <div class="plan">
-    <h3>PLAN 9 (Ultimate)</h3>
-    <p>☄️ RAM: Infinite</p>
-    <p>⚡ CPU: Infinite</p>
-    <p>📁 Disk: Infinite</p>
-    <p>💰 Price: ₹999 INR</p>
-  </div>
+      if (cart.length === 0) {
+        cartItems.innerHTML = "<li>No items added yet.</li>";
+        return;
+      }
 
+      cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - ${item.price}`;
+        cartItems.appendChild(li);
+      });
+    }
+
+    function addToCart(plan) {
+      cart.push(plan);
+      updateCart();
+    }
+
+    const plansContainer = document.getElementById("plansContainer");
+
+    plans.forEach((plan) => {
+      const div = document.createElement("div");
+      div.className = "plan";
+      div.innerHTML = `
+        <h2>${plan.name} – ${plan.price}</h2>
+        <p><strong>RAM:</strong> ${plan.ram}</p>
+        <p><strong>CPU:</strong> ${plan.cpu}</p>
+        <p><strong>Disk:</strong> ${plan.disk}</p>
+        <button class="btn-small" onclick="addToCart(${JSON.stringify(plan).replace(/"/g, '&quot;')})">Add to Cart</button>
+        <a href="https://discord.gg/yourinvite" class="btn-small">Buy Now</a>
+      `;
+      plansContainer.appendChild(div);
+    });
+  </script>
 </body>
 </html>
