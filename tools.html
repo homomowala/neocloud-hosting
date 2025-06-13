@@ -2,78 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NEOCLOUD Tools</title>
   <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
-<body>
-  <div class="loader-wrapper" id="loader">
-    <div class="loader"></div>
-    <div class="loader-text">Loading...</div>
+<body class="tools-bg">
+  <div class="loader-container">
+    <div class="loader-circle"></div>
+    <div class="loader-circle delay"></div>
+    <p class="loader-text">Loading...</p>
   </div>
 
-  <nav class="navbar">
-    <img src="logo.png" alt="Logo" class="logo" />
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="plans.html">Plans</a></li>
-      <li><a href="tools.html">Tools</a></li>
-    </ul>
-  </nav>
+  <header class="navbar">
+    <img src="logo.png" alt="NEOCLOUD Logo" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="plans.html">Plans</a>
+      <a class="active" href="tools.html">Tools</a>
+    </nav>
+    <a class="discord-btn" href="https://discord.gg/j9nAs6WsNb" target="_blank">Join NEOCLOUD Discord</a>
+  </header>
 
-  <section class="tools-section">
-    <h1>NEOCLOUD Tools</h1>
-    <p>Useful Minecraft server tools made easy to use.</p>
+  <main class="container">
+    <h1 class="title">🧰 NEOCLOUD Minecraft Tools</h1>
+    <p class="subtitle">All your essential tools in one place – beautifully designed for creators.</p>
+
     <div class="tool-grid">
       <a href="motd.html" class="tool-card">
         <h2>MOTD Generator</h2>
-        <p>Create colorful server MOTDs instantly.</p>
+        <p>Create stylish server MOTDs with formatting & color codes.</p>
       </a>
-      <a href="coords.html" class="tool-card">
+      <a href="coordinates.html" class="tool-card">
         <h2>Coordinate Calculator</h2>
-        <p>Convert between overworld and nether coords.</p>
+        <p>Convert and calculate coordinates between dimensions.</p>
       </a>
       <a href="skin.html" class="tool-card">
         <h2>Skin Grabber</h2>
-        <p>Get any Minecraft player's skin instantly.</p>
+        <p>View and download Minecraft skins by username.</p>
       </a>
-      <a href="enchant.html" class="tool-card">
+      <a href="enchantments.html" class="tool-card">
         <h2>Enchantment Calculator</h2>
-        <p>Optimize enchantments for your gear.</p>
+        <p>See enchantment levels and requirements for items.</p>
       </a>
-      <a href="resource.html" class="tool-card">
+      <a href="resources.html" class="tool-card">
         <h2>Resource Calculator</h2>
-        <p>Calculate materials for your builds.</p>
+        <p>Calculate material requirements for builds or projects.</p>
       </a>
       <a href="circle.html" class="tool-card">
         <h2>Circle Generator</h2>
-        <p>Get perfect pixel circles for Minecraft builds.</p>
+        <p>Generate pixel-art circles for builds of any size.</p>
       </a>
-      <a href="tick.html" class="tool-card">
+      <a href="ticks.html" class="tool-card">
         <h2>Tick Calculator</h2>
-        <p>Convert time to game ticks and vice versa.</p>
+        <p>Convert between ticks and real-time units easily.</p>
       </a>
       <a href="map.html" class="tool-card">
         <h2>Map Generator</h2>
-        <p>Create Minecraft maps with ease.</p>
+        <p>Create and preview Minecraft map items from images.</p>
       </a>
     </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 NEOCLOUD Tools. All rights reserved.</p>
-  </footer>
+  </main>
 
   <script>
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        const loader = document.getElementById("loader");
-        if (loader) {
-          loader.style.opacity = "0";
-          setTimeout(() => loader.remove(), 500);
-        }
-      }, 2000);
-    });
+    window.onload = () => {
+      document.querySelector('.loader-container').style.display = 'none';
+    };
   </script>
 </body>
 </html>
