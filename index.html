@@ -2,57 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NEOCLOUD - Mythical Minecraft Hosting</title>
-  <link rel="stylesheet" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEOCLOUD - Mythical Hosting</title>
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-  <div id="loader">
-    <div class="loader-circle"></div>
-    <div id="loader-text">Loading...</div>
+  <!-- Loader -->
+  <div class="loader-wrapper" id="loader">
+    <div class="loader"></div>
+    <div class="loader-text">Loading...</div>
   </div>
 
-  <div class="navbar">
-    <img src="logo.png" alt="NEOCLOUD Logo">
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="plans.html">Plans</a>
-      <a href="tools.html">Tools</a>
-    </div>
-  </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="plans.html">Plans</a></li>
+      <li><a href="tools.html">Tools</a></li>
+    </ul>
+    <a href="#" class="discord-btn">Join NEOCLOUD Discord</a>
+  </nav>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <h1>Welcome to NEOCLOUD</h1>
-    <p>Mythical-Grade Minecraft Server Hosting at unbeatable prices. Built for players, trusted by communities.</p>
-    <a href="plans.html" class="btn">View Plans</a>
+    <h1>NEOCLOUD</h1>
+    <p>The Mythical Minecraft Server Hosting You Deserve</p>
+    <a href="plans.html" class="btn">View Hosting Plans</a>
   </section>
 
   <section class="features">
     <h2>Why Choose NEOCLOUD?</h2>
     <ul>
-      <li><strong>⚡ Fast Intel Xeon CPUs:</strong> Top-tier performance with low latency</li>
-      <li><strong>📡 24/7 Uptime:</strong> Always online, always playable</li>
-      <li><strong>💸 Budget Friendly:</strong> Plans starting from just ₹40 INR</li>
-      <li><strong>🔧 Full Control:</strong> Pterodactyl panel access, easy modding</li>
-      <li><strong>🛡️ DDoS Protection:</strong> Secure and uninterrupted gameplay</li>
+      <li>⚡ Instant Setup</li>
+      <li>🛡️ DDoS Protection</li>
+      <li>💸 Affordable Prices</li>
+      <li>🌐 Global Reach</li>
+      <li>🎮 Custom Minecraft Tools</li>
     </ul>
   </section>
 
-  <section class="cta">
-    <h2>Ready to host your Minecraft dreams?</h2>
-    <p>Get started with NEOCLOUD today and experience lag-free gameplay with unbeatable value.</p>
-    <a href="plans.html" class="btn">Choose a Plan</a>
-  </section>
-
-  <section class="community">
-    <h2>Join Our Discord Community</h2>
-    <p>Need help or want to chat? Join our Discord server for support, updates, and fun!</p>
-    <a href="https://discord.gg/yourinvite" class="btn">Join Discord</a>
-  </section>
-
   <footer>
-    <p>© 2025 NEOCLOUD. All rights reserved.</p>
-    <p><a href="tools.html">Tools</a> | <a href="plans.html">Plans</a> | <a href="https://discord.gg/yourinvite">Discord</a></p>
+    <p>&copy; 2025 NEOCLOUD Hosting. All rights reserved.</p>
   </footer>
+
+  <!-- Loader Script -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const loader = document.getElementById("loader");
+        if (loader) {
+          loader.style.opacity = "0";
+          setTimeout(() => loader.remove(), 500);
+        }
+      }, 2000);
+    });
+  </script>
 </body>
 </html>
