@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resource Calculator - NEOCLOUD</title>
+  <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+  <nav class="navbar">NEOCLOUD</nav>
+  <main class="tool">
+    <h1>Resource Calculator</h1>
+    <label>Stacks Needed: <input id="stacks" type="number" /></label>
+    <button onclick="calcRes()">Calculate</button>
+    <p id="output"></p>
+  </main>
+  <script>
+    function calcRes() {
+      const stacks = parseInt(document.getElementById("stacks").value);
+      document.getElementById("output").innerText = `${stacks * 64} total items`;
+    }
+  </script>
+</body>
+</html>
