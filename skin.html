@@ -1,54 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Skin Grabber - NEOCLOUD</title>
-  <link rel="stylesheet" href="main.css">
-  <style>
-    body {
-      background: #1e0033;
-      color: white;
-      font-family: monospace;
-      padding: 2rem;
-      text-align: center;
-    }
-    input {
-      padding: 0.5rem;
-      background: #2b0051;
-      border: none;
-      color: white;
-      border-radius: 8px;
-      width: 80%;
-    }
-    img {
-      margin-top: 1rem;
-      border-radius: 10px;
-      background: #2a003f;
-    }
-  </style>
+  <link rel="stylesheet" href="main.css"/>
 </head>
 <body>
-
-  <h1>🧑 Skin Grabber</h1>
-  <p>Enter a Minecraft username:</p>
-  <input type="text" id="username" placeholder="e.g. Notch">
-  <div id="skinContainer"></div>
-
+  <nav class="navbar">NEOCLOUD</nav>
+  <main class="tool">
+    <h1>Skin Grabber</h1>
+    <input id="username" placeholder="Minecraft Username"/>
+    <button onclick="getSkin()">Grab Skin</button>
+    <img id="skin" style="margin-top: 10px; display: block;" />
+  </main>
   <script>
-    const input = document.getElementById('username');
-    const container = document.getElementById('skinContainer');
-
-    input.addEventListener('input', () => {
-      const user = input.value.trim();
-      if (user.length > 0) {
-        container.innerHTML = \`
-          <img src="https://minotar.net/armor/body/\${user}/100.png" alt="Skin of \${user}">
-        \`;
-      } else {
-        container.innerHTML = '';
-      }
-    });
+    function getSkin() {
+      const user = document.getElementById("username").value;
+      document.getElementById("skin").src = `https://mc-heads.net/body/${user}/300`;
+    }
   </script>
-
 </body>
 </html>
