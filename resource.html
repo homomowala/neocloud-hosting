@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resource Calculator - NEOCLOUD</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    body {
+      background: #1e0033;
+      color: white;
+      font-family: monospace;
+      padding: 2rem;
+    }
+    input {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      background: #2b0051;
+      color: white;
+      border: none;
+      border-radius: 6px;
+    }
+    .output {
+      margin-top: 1rem;
+      background: #370066;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🪓 Resource Calculator</h1>
+  <p>Convert stacks to items and vice versa.</p>
+  <input type="number" id="stacks" placeholder="Stacks">
+  <input type="number" id="items" placeholder="Items">
+  <div class="output" id="total"></div>
+
+  <script>
+    const stacks = document.getElementById('stacks');
+    const items = document.getElementById('items');
+    const total = document.getElementById('total');
+
+    function update() {
+      const s = parseInt(stacks.value) || 0;
+      const i = parseInt(items.value) || 0;
+      total.innerHTML = \`
+        Total Items: <b>\${s * 64 + i}</b><br>
+        Total Stacks: <b>\${Math.floor((s * 64 + i) / 64)}</b> + \${(s * 64 + i) % 64} items
+      \`;
+    }
+
+    stacks.addEventListener('input', update);
+    items.addEventListener('input', update);
+  </script>
+
+</body>
+</html>
