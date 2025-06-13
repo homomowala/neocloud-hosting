@@ -1,57 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Circle Generator - NEOCLOUD</title>
-  <link rel="stylesheet" href="main.css">
-  <style>
-    body {
-      background: #1e0033;
-      color: white;
-      font-family: monospace;
-      padding: 2rem;
-    }
-    input {
-      padding: 0.5rem;
-      background: #2b0051;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      width: 100%;
-    }
-    pre {
-      margin-top: 1rem;
-      white-space: pre;
-      background: #370066;
-      padding: 1rem;
-      border-radius: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="main.css"/>
 </head>
 <body>
-
-  <h1>⭕ Circle Generator</h1>
-  <p>Text-based circle layout for blocks</p>
-  <input type="number" id="radius" placeholder="Enter radius (e.g. 5)">
-  <pre id="circleOut"></pre>
-
+  <nav class="navbar">NEOCLOUD</nav>
+  <main class="tool">
+    <h1>Circle Size Calculator</h1>
+    <input id="radius" type="number" placeholder="Enter radius" />
+    <button onclick="gen()">Calculate</button>
+    <p id="result"></p>
+  </main>
   <script>
-    function generateCircle(r) {
-      let output = '';
-      for (let y = -r; y <= r; y++) {
-        for (let x = -r; x <= r; x++) {
-          output += (x * x + y * y <= r * r) ? '#' : ' ';
-        }
-        output += '\\n';
-      }
-      return output;
+    function gen() {
+      const r = parseFloat(document.getElementById("radius").value);
+      const circ = (2 * Math.PI * r).toFixed(2);
+      document.getElementById("result").innerText = `Perimeter: ${circ} blocks`;
     }
-
-    document.getElementById('radius').addEventListener('input', e => {
-      const r = parseInt(e.target.value);
-      document.getElementById('circleOut').textContent = isNaN(r) ? '' : generateCircle(r);
-    });
   </script>
-
 </body>
 </html>
