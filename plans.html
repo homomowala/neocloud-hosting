@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,10 +10,7 @@
   <div class="loader-wrapper" id="loader">
     <div class="loader"></div>
     <p class="loader-text">Loading...</p>
-  </div>
-
-  <!-- Navbar -->
-  <nav class="navbar">
+  </div>  <!-- Navbar -->  <nav class="navbar">
     <img src="logo.png" alt="Logo" class="logo" />
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -22,113 +18,119 @@
       <li><a href="tools.html">Tools</a></li>
     </ul>
     <a href="https://discord.gg/" class="discord-btn" target="_blank">Join Discord</a>
-  </nav>
-
-  <!-- Hero -->
-  <section class="hero">
+  </nav>  <!-- Hero -->  <section class="hero">
     <h1>⚡ NEOCLOUD CHEAP MC SERVER PLAN ⚡</h1>
     <p>Hosted on powerful Intel Xeon hardware with unbeatable pricing.</p>
     <h3>🖥️ Processor: Intel Xeon</h3>
-  </section>
+  </section>  <!-- Plans Section -->  <section class="plans">
+    <div class="plan-grid"><div class="plan-card">
+    <h2>Plan 1</h2>
+    <p>💾 RAM: 2GB</p>
+    <p>⚙️ CPU: 80%</p>
+    <p>📁 Disk: 5GB</p>
+    <p>💸 Price: ₹40 INR</p>
+    <a class="btn" href="https://discord.gg/">Buy Now</a>
+    <button class="btn-outline" onclick="addToCart('Plan 1')">Add to Cart</button>
+  </div>
 
-  <!-- Plans Section -->
-  <section class="plans">
-    <div class="plan-grid">
-      <!-- Plan 1 -->
-      <div class="plan-card">
-        <h2>Plan 1</h2>
-        <p>💾 RAM: 2GB</p>
-        <p>⚙️ CPU: 80%</p>
-        <p>📁 Disk: 5GB</p>
-        <p>💸 Price: ₹40 INR</p>
-        <a class="btn" href="#">Buy Now</a>
-        <a class="btn-outline" href="#">Add to Cart</a>
-      </div>
+  <div class="plan-card">
+    <h2>Plan 2</h2>
+    <p>💾 RAM: 4GB</p>
+    <p>⚙️ CPU: 120%</p>
+    <p>📁 Disk: 10GB</p>
+    <p>💸 Price: ₹80 INR</p>
+    <a class="btn" href="https://discord.gg/">Buy Now</a>
+    <button class="btn-outline" onclick="addToCart('Plan 2')">Add to Cart</button>
+  </div>
 
-      <!-- Plan 2 -->
-      <div class="plan-card">
-        <h2>Plan 2</h2>
-        <p>💾 RAM: 4GB</p>
-        <p>⚙️ CPU: 120%</p>
-        <p>📁 Disk: 10GB</p>
-        <p>💸 Price: ₹80 INR</p>
-        <a class="btn" href="#">Buy Now</a>
-        <a class="btn-outline" href="#">Add to Cart</a>
-      </div>
+  <div class="plan-card">
+    <h2>Plan 3</h2>
+    <p>💾 RAM: 6GB</p>
+    <p>⚙️ CPU: 150%</p>
+    <p>📁 Disk: 15GB</p>
+    <p>💸 Price: ₹120 INR</p>
+    <a class="btn" href="https://discord.gg/">Buy Now</a>
+    <button class="btn-outline" onclick="addToCart('Plan 3')">Add to Cart</button>
+  </div>
 
-      <!-- Plan 3 -->
-      <div class="plan-card">
-        <h2>Plan 3</h2>
-        <p>💾 RAM: 6GB</p>
-        <p>⚙️ CPU: 150%</p>
-        <p>📁 Disk: 15GB</p>
-        <p>💸 Price: ₹120 INR</p>
-        <a class="btn" href="#">Buy Now</a>
-        <a class="btn-outline" href="#">Add to Cart</a>
-      </div>
+  <div class="plan-card">
+    <h2>Plan 4</h2>
+    <p>💾 RAM: 8GB</p>
+    <p>⚙️ CPU: 200%</p>
+    <p>📁 Disk: 20GB</p>
+    <p>💸 Price: ₹160 INR</p>
+    <a class="btn" href="https://discord.gg/">Buy Now</a>
+    <button class="btn-outline" onclick="addToCart('Plan 4')">Add to Cart</button>
+  </div>
 
-      <!-- Plan 4 -->
-      <div class="plan-card">
-        <h2>Plan 4</h2>
-        <p>💾 RAM: 8GB</p>
-        <p>⚙️ CPU: 200%</p>
-        <p>📁 Disk: 20GB</p>
-        <p>💸 Price: ₹160 INR</p>
-        <a class="btn" href="#">Buy Now</a>
-        <a class="btn-outline" href="#">Add to Cart</a>
-      </div>
+  <div class="plan-card">
+    <h2>Plan 6</h2>
+    <p>💾 RAM: 10GB</p>
+    <p>⚙️ CPU: 250%</p>
+    <p>📁 Disk: 22GB</p>
+    <p>💸 Price: ₹250 INR</p>
+    <a class="btn" href="https://discord.gg/">Buy Now</a>
+    <button class="btn-outline" onclick="addToCart('Plan 6')">Add to Cart</button>
+  </div>
 
-      <!-- Plan 6 -->
-      <div class="plan-card">
-        <h2>Plan 6</h2>
-        <p>💾 RAM: 10GB</p>
-        <p>⚙️ CPU: 250%</p>
-        <p>📁 Disk: 22GB</p>
-        <p>💸 Price: ₹250 INR</p>
-        <a class="btn" href="#">Buy Now</a>
-        <a class="btn-outline" href="#">Add to Cart</a>
-      </div>
+  <div class="plan-card">
+    <h2>Plan 7</h2>
+    <p>💾 RAM: 12GB</p>
+    <p>⚙️ CPU: 300%</p>
+    <p>📁 Disk: 25GB</p>
+    <p>💸 Price: ₹350 INR</p>
+    <a class="btn" href="https://discord.gg/">Buy Now</a>
+    <button class="btn-outline" onclick="addToCart('Plan 7')">Add to Cart</button>
+  </div>
 
-      <!-- Plan 7 -->
-      <div class="plan-card">
-        <h2>Plan 7</h2>
-        <p>💾 RAM: 12GB</p>
-        <p>⚙️ CPU: 300%</p>
-        <p>📁 Disk: 25GB</p>
-        <p>💸 Price: ₹350 INR</p>
-        <a class="btn" href="#">Buy Now</a>
-        <a class="btn-outline" href="#">Add to Cart</a>
-      </div>
+  <div class="plan-card">
+    <h2>Plan 8</h2>
+    <p>💾 RAM: 16GB</p>
+    <p>⚙️ CPU: 350%</p>
+    <p>📁 Disk: 30GB</p>
+    <p>💸 Price: ₹450 INR</p>
+    <a class="btn" href="https://discord.gg/">Buy Now</a>
+    <button class="btn-outline" onclick="addToCart('Plan 8')">Add to Cart</button>
+  </div>
 
-      <!-- Plan 8 -->
-      <div class="plan-card">
-        <h2>Plan 8</h2>
-        <p>💾 RAM: 16GB</p>
-        <p>⚙️ CPU: 350%</p>
-        <p>📁 Disk: 30GB</p>
-        <p>💸 Price: ₹450 INR</p>
-        <a class="btn" href="#">Buy Now</a>
-        <a class="btn-outline" href="#">Add to Cart</a>
-      </div>
+  <div class="plan-card">
+    <h2>Plan 9</h2>
+    <p>💾 RAM: Infinite</p>
+    <p>⚙️ CPU: Infinite</p>
+    <p>📁 Disk: Infinite</p>
+    <p>💸 Price: ₹999 INR</p>
+    <a class="btn" href="https://discord.gg/">Buy Now</a>
+    <button class="btn-outline" onclick="addToCart('Plan 9')">Add to Cart</button>
+  </div>
 
-      <!-- Plan 9 -->
-      <div class="plan-card">
-        <h2>Plan 9</h2>
-        <p>💾 RAM: ∞</p>
-        <p>⚙️ CPU: ∞</p>
-        <p>📁 Disk: ∞</p>
-        <p>💸 Price: ₹999 INR</p>
-        <a class="btn" href="#">Buy Now</a>
-        <a class="btn-outline" href="#">Add to Cart</a>
-      </div>
-    </div>
-  </section>
+</div>
 
-  <footer>
+<div class="cart-section">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <a href="https://discord.gg/" class="btn">Buy It</a>
+</div>
+
+  </section>  <footer>
     <p>© 2025 NEOCLOUD. All Rights Reserved.</p>
-  </footer>
+  </footer>  <script>
+    const cartItems = [];
 
-  <script>
+    function addToCart(planName) {
+      cartItems.push(planName);
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const cartList = document.getElementById('cart-items');
+      cartList.innerHTML = '';
+      cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        cartList.appendChild(li);
+      });
+    }
+
     window.addEventListener('load', () => {
       const loader = document.getElementById('loader');
       setTimeout(() => {
@@ -136,6 +138,5 @@
         setTimeout(() => loader.remove(), 500);
       }, 2000);
     });
-  </script>
-</body>
+  </script></body>
 </html>
