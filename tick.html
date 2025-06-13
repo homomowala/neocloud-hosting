@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tick Calculator - NEOCLOUD</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    body {
+      background: #1e0033;
+      color: white;
+      font-family: monospace;
+      padding: 2rem;
+    }
+    input {
+      padding: 0.5rem;
+      background: #2b0051;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+    .result {
+      background: #370066;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>⏱ Tick Calculator</h1>
+  <p>Convert Minecraft ticks to seconds and vice versa</p>
+
+  <input type="number" id="ticks" placeholder="Enter ticks">
+  <input type="number" id="seconds" placeholder="Enter seconds">
+
+  <div class="result" id="result"></div>
+
+  <script>
+    const ticks = document.getElementById('ticks');
+    const seconds = document.getElementById('seconds');
+    const result = document.getElementById('result');
+
+    function update() {
+      const t = parseFloat(ticks.value);
+      const s = parseFloat(seconds.value);
+
+      if (!isNaN(t)) {
+        result.innerHTML = \`\${t} ticks = \${(t / 20).toFixed(2)} seconds\`;
+      } else if (!isNaN(s)) {
+        result.innerHTML = \`\${s} seconds = \${Math.round(s * 20)} ticks\`;
+      } else {
+        result.innerHTML = '';
+      }
+    }
+
+    ticks.addEventListener('input', () => {
+      seconds.value = '';
+      update();
+    });
+
+    seconds.addEventListener('input', () => {
+      ticks.value = '';
+      update();
+    });
+  </script>
+
+</body>
+</html>
