@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MOTD Generator</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css" />
 </head>
-<body>
-  <div class="navbar"><a href="tools.html">← Back</a></div>
-  <section class="tool-section">
-    <h1>MOTD Generator</h1>
-    <p>Create a Minecraft MOTD with color codes.</p>
-    <textarea id="motd" placeholder="Enter MOTD here..."></textarea>
-    <button onclick="generate()">Copy with Color</button>
-    <p id="result"></p>
-  </section>
+<body class="tool-bg">
+  <header class="navbar"><img src="logo.png" class="logo" /><nav><a href="index.html">Home</a><a href="plans.html">Plans</a><a class="active" href="tools.html">Tools</a></nav></header>
+  <main class="tool-main">
+    <h1 class="tool-title">🎨 MOTD Generator</h1>
+    <p class="tool-desc">Create colorful MOTDs using Minecraft formatting codes (like §c, §l).</p>
+    <textarea id="motdInput" placeholder="Enter your MOTD..." class="tool-textarea"></textarea>
+    <button onclick="generateMOTD()" class="tool-btn">Generate</button>
+    <p id="motdOutput" class="tool-output"></p>
+  </main>
   <script>
-    function generate() {
-      const text = document.getElementById('motd').value;
-      const formatted = text.replace(/&([0-9a-fk-or])/gi, '§$1');
-      navigator.clipboard.writeText(formatted);
-      document.getElementById('result').innerText = 'Copied MOTD: ' + formatted;
+    function generateMOTD() {
+      document.getElementById("motdOutput").innerText = document.getElementById("motdInput").value.replace(/§/g, "&");
     }
   </script>
 </body>
