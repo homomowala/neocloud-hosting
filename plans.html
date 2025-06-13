@@ -4,114 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NEOCLOUD Plans</title>
-  <link rel="stylesheet" href="main.css">
-  <style>
-    .cart {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      margin: 20px;
-      color: white;
-    }
-    .btn-small {
-      padding: 8px 16px;
-      margin: 4px;
-      font-size: 14px;
-      background-color: #7e3ff2;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .btn-small:hover {
-      background-color: #a176f6;
-    }
-  </style>
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-  <div id="loader">
-    <div class="loader-circle"></div>
-    <div id="loader-text">Loading...</div>
+  <div class="loader-wrapper" id="loader">
+    <div class="loader"></div>
+    <div class="loader-text">Loading...</div>
   </div>
 
-  <div class="navbar">
-    <img src="logo.png" alt="NEOCLOUD Logo">
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="plans.html">Plans</a>
-      <a href="tools.html">Tools</a>
-    </div>
-  </div>
+  <nav class="navbar">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="plans.html">Plans</a></li>
+      <li><a href="tools.html">Tools</a></li>
+    </ul>
+  </nav>
 
   <section class="plans">
-    <h1>NEOCLOUD Cheap Minecraft Server Plans</h1>
-    <p>Choose from affordable and powerful Minecraft hosting plans. Add to your cart or buy directly.</p>
-    <div class="plan-list" id="plansContainer">
-      <!-- Plans will be injected here -->
-    </div>
-  </section>
+    <h1>Cheap Minecraft Server Plans</h1>
+    <p>All powered by Intel Xeon CPUs and lightning-fast SSD storage.</p>
+    <div class="plan-grid">
+      <!-- Repeat for all plans -->
+      <div class="plan-card">
+        <h2>Plan 1</h2>
+        <p>💾 RAM: 2GB</p>
+        <p>⚙️ CPU: 80%</p>
+        <p>🗄️ Disk: 5GB</p>
+        <p>💰 40₹ INR</p>
+        <button class="btn">Buy Now</button>
+        <button class="btn-outline">Add to Cart</button>
+      </div>
 
-  <section class="cart">
-    <h2>Your Cart</h2>
-    <ul id="cartItems">
-      <li>No items added yet.</li>
-    </ul>
+      <!-- Add other plans (Plan 2 to Plan 9) similarly -->
+      <!-- You can paste rest of the plan cards here -->
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 NEOCLOUD. All rights reserved.</p>
-    <p><a href="index.html">Home</a> | <a href="tools.html">Tools</a></p>
+    <p>&copy; 2025 NEOCLOUD Hosting. All rights reserved.</p>
   </footer>
 
   <script>
-    const plans = [
-      { name: "Plan 1", ram: "2GB", cpu: "80%", disk: "5GB", price: "₹40" },
-      { name: "Plan 2", ram: "4GB", cpu: "120%", disk: "10GB", price: "₹80" },
-      { name: "Plan 3", ram: "6GB", cpu: "150%", disk: "15GB", price: "₹120" },
-      { name: "Plan 4", ram: "8GB", cpu: "200%", disk: "20GB", price: "₹160" },
-      { name: "Plan 6", ram: "10GB", cpu: "250%", disk: "22GB", price: "₹250" },
-      { name: "Plan 7", ram: "12GB", cpu: "300%", disk: "25GB", price: "₹350" },
-      { name: "Plan 8", ram: "16GB", cpu: "350%", disk: "30GB", price: "₹450" },
-      { name: "Plan 9", ram: "∞", cpu: "∞", disk: "∞", price: "₹999" },
-    ];
-
-    const cart = [];
-
-    function updateCart() {
-      const cartItems = document.getElementById("cartItems");
-      cartItems.innerHTML = "";
-
-      if (cart.length === 0) {
-        cartItems.innerHTML = "<li>No items added yet.</li>";
-        return;
-      }
-
-      cart.forEach((item, index) => {
-        const li = document.createElement("li");
-        li.textContent = `${item.name} - ${item.price}`;
-        cartItems.appendChild(li);
-      });
-    }
-
-    function addToCart(plan) {
-      cart.push(plan);
-      updateCart();
-    }
-
-    const plansContainer = document.getElementById("plansContainer");
-
-    plans.forEach((plan) => {
-      const div = document.createElement("div");
-      div.className = "plan";
-      div.innerHTML = `
-        <h2>${plan.name} – ${plan.price}</h2>
-        <p><strong>RAM:</strong> ${plan.ram}</p>
-        <p><strong>CPU:</strong> ${plan.cpu}</p>
-        <p><strong>Disk:</strong> ${plan.disk}</p>
-        <button class="btn-small" onclick="addToCart(${JSON.stringify(plan).replace(/"/g, '&quot;')})">Add to Cart</button>
-        <a href="https://discord.gg/yourinvite" class="btn-small">Buy Now</a>
-      `;
-      plansContainer.appendChild(div);
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const loader = document.getElementById("loader");
+        if (loader) {
+          loader.style.opacity = "0";
+          setTimeout(() => loader.remove(), 500);
+        }
+      }, 2000);
     });
   </script>
 </body>
