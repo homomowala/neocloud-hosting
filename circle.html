@@ -1,25 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Circle Generator - NEOCLOUD</title>
-  <link rel="stylesheet" href="main.css"/>
+  <meta charset="UTF-8">
+  <title>Circle Generator</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <nav class="navbar">NEOCLOUD</nav>
-  <main class="tool">
-    <h1>Circle Size Calculator</h1>
-    <input id="radius" type="number" placeholder="Enter radius" />
-    <button onclick="gen()">Calculate</button>
-    <p id="result"></p>
-  </main>
-  <script>
-    function gen() {
-      const r = parseFloat(document.getElementById("radius").value);
-      const circ = (2 * Math.PI * r).toFixed(2);
-      document.getElementById("result").innerText = `Perimeter: ${circ} blocks`;
-    }
-  </script>
+  <div class="navbar"><a href="tools.html">← Back</a></div>
+  <section class="tool-section">
+    <h1>Circle Generator</h1>
+    <p>Shows circle outlines in pixels (opens in external tool).</p>
+    <a href="https://donatstudios.com/PixelCircleGenerator" target="_blank">
+      Open Circle Generator
+    </a>
+  </section>
 </body>
 </html>
