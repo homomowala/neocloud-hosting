@@ -1,49 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MOTD Editor - NEOCLOUD</title>
-  <link rel="stylesheet" href="main.css">
-  <style>
-    body {
-      background: #1e0033;
-      color: white;
-      font-family: monospace;
-      padding: 2rem;
-    }
-    textarea {
-      width: 100%;
-      height: 100px;
-      background: #2b0051;
-      color: white;
-      border: none;
-      padding: 1rem;
-      border-radius: 10px;
-    }
-    .preview {
-      margin-top: 1rem;
-      background: #370066;
-      padding: 1rem;
-      border-radius: 10px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MOTD Generator - NEOCLOUD</title>
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-
-  <h1>🎨 MOTD Editor</h1>
-  <p>Edit your Minecraft server MOTD (supports color codes).</p>
-  <textarea id="motdInput" placeholder="Type your MOTD..."></textarea>
-  <div class="preview" id="motdPreview">Preview will appear here</div>
-
+  <nav class="navbar">NEOCLOUD</nav>
+  <main class="tool">
+    <h1>MOTD Generator</h1>
+    <input id="motdInput" placeholder="Enter MOTD text" />
+    <button onclick="generateMOTD()">Generate</button>
+    <p id="output"></p>
+  </main>
   <script>
-    const input = document.getElementById('motdInput');
-    const preview = document.getElementById('motdPreview');
-    input.addEventListener('input', () => {
-      preview.innerHTML = input.value
-        .replace(/§[0-9a-fk-or]/gi, '')
-        .replace(/\n/g, '<br>');
-    });
+    function generateMOTD() {
+      const motd = document.getElementById('motdInput').value;
+      document.getElementById('output').innerText = `§a${motd.replace(/ /g, ' §r')}`;
+    }
   </script>
-
 </body>
 </html>
