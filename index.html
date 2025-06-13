@@ -1,39 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-black text-white">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NEOCLOUD | Home</title>
-  <link rel="stylesheet" href="main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
 </head>
-<body>
-  <div id="loader" class="loader-screen">
-    <div class="dual-loader">
-      <div class="circle outer"></div>
-      <div class="circle inner"></div>
-      <p>Loading...</p>
-    </div>
+<body class="font-press-start">
+  <div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+    <div class="loader"></div>
+    <p class="ml-4 text-purple-300">Loading...</p>
   </div>
 
-  <header class="navbar">
-    <img src="assets/logo.png" alt="Logo" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="plans.html">Plans</a>
-      <a href="tools.html">Tools</a>
-    </nav>
-  </header>
+  <nav class="flex justify-between items-center px-6 py-4 bg-black border-b border-purple-500">
+    <img src="logo.png" alt="NEOCLOUD" class="h-8" />
+    <div class="space-x-4 text-sm">
+      <a href="index.html" class="text-purple-400 underline">Home</a>
+      <a href="plans.html" class="hover:text-purple-400">Plans</a>
+      <a href="tools.html" class="hover:text-purple-400">Tools</a>
+      <a href="#" class="bg-purple-600 px-3 py-1 rounded hover:bg-purple-800 transition">Join Discord</a>
+    </div>
+  </nav>
 
-  <main class="hero">
-    <h1 class="arcade-glow">Welcome to NEOCLOUD</h1>
-    <p class="subtext">Premium Minecraft hosting with powerful tools.</p>
-  </main>
+  <section class="text-center mt-20 px-6">
+    <h1 class="text-4xl text-purple-300 mb-6">Welcome to NEOCLOUD</h1>
+    <p class="text-lg text-purple-200">Cheap Minecraft Hosting & Powerful Online Tools</p>
+    <p class="mt-2 text-sm text-gray-400">Smooth performance. Mythical design. Affordable prices.</p>
+  </section>
 
-  <script>
-    setTimeout(() => {
-      document.getElementById("loader").style.display = "none";
-    }, 2000);
-  </script>
+  <script>setTimeout(() => document.getElementById('loader').style.display = 'none', 2000);</script>
 </body>
 </html>
