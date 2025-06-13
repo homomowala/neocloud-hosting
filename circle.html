@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Circle Generator</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css" />
 </head>
-<body>
-  <div class="navbar"><a href="tools.html">← Back</a></div>
-  <section class="tool-section">
-    <h1>Circle Generator</h1>
-    <p>Shows circle outlines in pixels (opens in external tool).</p>
-    <a href="https://donatstudios.com/PixelCircleGenerator" target="_blank">
-      Open Circle Generator
-    </a>
-  </section>
+<body class="tool-bg">
+  <header class="navbar"><img src="logo.png" class="logo" /><nav><a href="index.html">Home</a><a href="plans.html">Plans</a><a class="active" href="tools.html">Tools</a></nav></header>
+  <main class="tool-main">
+    <h1 class="tool-title">⭕ Circle Generator</h1>
+    <p class="tool-desc">Generate pixel-art circles for Minecraft builds.</p>
+    <input type="number" id="radius" placeholder="Radius" class="tool-input" />
+    <button onclick="drawCircle()" class="tool-btn">Generate</button>
+    <pre id="circleResult" class="tool-output"></pre>
+  </main>
+  <script>
+    function drawCircle() {
+      const r = parseInt(document.getElementById("radius").value);
+      let output = "";
+      for (let y = -r; y <= r; y++) {
+        for (let x = -r; x <= r; x++) {
+          output += x * x + y * y <= r * r ? "⬛" : "  ";
+        }
+        output += "\n";
+      }
+      document.getElementById("circleResult").innerText = output;
+    }
+  </script>
 </body>
 </html>
