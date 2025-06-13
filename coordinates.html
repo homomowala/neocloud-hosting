@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coordinate Calculator</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body class="tool-bg">
+  <header class="navbar"><img src="logo.png" class="logo" /><nav><a href="index.html">Home</a><a href="plans.html">Plans</a><a class="active" href="tools.html">Tools</a></nav></header>
+  <main class="tool-main">
+    <h1 class="tool-title">📍 Coordinate Calculator</h1>
+    <p class="tool-desc">Convert coordinates between Overworld and Nether dimensions.</p>
+    <input type="number" id="x" placeholder="X" class="tool-input" />
+    <input type="number" id="z" placeholder="Z" class="tool-input" />
+    <button onclick="convertCoords()" class="tool-btn">Convert</button>
+    <p id="coordOutput" class="tool-output"></p>
+  </main>
+  <script>
+    function convertCoords() {
+      const x = parseFloat(document.getElementById("x").value);
+      const z = parseFloat(document.getElementById("z").value);
+      document.getElementById("coordOutput").innerText = 
+        `Nether: ${x / 8}, ${z / 8} | Overworld: ${x * 8}, ${z * 8}`;
+    }
+  </script>
+</body>
+</html>
