@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enchantment Calculator - NEOCLOUD</title>
+  <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+  <nav class="navbar">NEOCLOUD</nav>
+  <main class="tool">
+    <h1>Enchantment Calculator</h1>
+    <input id="level" type="number" placeholder="XP Level" />
+    <button onclick="calc()">Estimate</button>
+    <p id="result"></p>
+  </main>
+  <script>
+    function calc() {
+      const level = parseInt(document.getElementById("level").value);
+      const lapis = Math.ceil(level / 5);
+      document.getElementById("result").innerText = `Approx. ${lapis} lapis lazuli required`;
+    }
+  </script>
+</body>
+</html>
