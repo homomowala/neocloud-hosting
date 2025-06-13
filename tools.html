@@ -2,72 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NEOCLOUD Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEOCLOUD | Tools</title>
   <link rel="stylesheet" href="main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
-<body class="tools-bg">
-  <div class="loader-container">
-    <div class="loader-circle"></div>
-    <div class="loader-circle delay"></div>
-    <p class="loader-text">Loading...</p>
-  </div>
-
-  <header class="navbar">
-    <img src="logo.png" alt="NEOCLOUD Logo" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="plans.html">Plans</a>
-      <a class="active" href="tools.html">Tools</a>
-    </nav>
-    <a class="discord-btn" href="https://discord.gg/j9nAs6WsNb" target="_blank">Join NEOCLOUD Discord</a>
-  </header>
-
-  <main class="container">
-    <h1 class="title">🧰 NEOCLOUD Minecraft Tools</h1>
-    <p class="subtitle">All your essential tools in one place – beautifully designed for creators.</p>
-
-    <div class="tool-grid">
-      <a href="motd.html" class="tool-card">
-        <h2>MOTD Generator</h2>
-        <p>Create stylish server MOTDs with formatting & color codes.</p>
-      </a>
-      <a href="coordinates.html" class="tool-card">
-        <h2>Coordinate Calculator</h2>
-        <p>Convert and calculate coordinates between dimensions.</p>
-      </a>
-      <a href="skin.html" class="tool-card">
-        <h2>Skin Grabber</h2>
-        <p>View and download Minecraft skins by username.</p>
-      </a>
-      <a href="enchantments.html" class="tool-card">
-        <h2>Enchantment Calculator</h2>
-        <p>See enchantment levels and requirements for items.</p>
-      </a>
-      <a href="resources.html" class="tool-card">
-        <h2>Resource Calculator</h2>
-        <p>Calculate material requirements for builds or projects.</p>
-      </a>
-      <a href="circle.html" class="tool-card">
-        <h2>Circle Generator</h2>
-        <p>Generate pixel-art circles for builds of any size.</p>
-      </a>
-      <a href="ticks.html" class="tool-card">
-        <h2>Tick Calculator</h2>
-        <p>Convert between ticks and real-time units easily.</p>
-      </a>
-      <a href="map.html" class="tool-card">
-        <h2>Map Generator</h2>
-        <p>Create and preview Minecraft map items from images.</p>
-      </a>
-    </div>
+<body>
+  <div class="loader"><div></div><div></div><p>Loading...</p></div>
+  <nav>
+    <img src="logo.png" alt="NEOCLOUD Logo" class="logo"/>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="plans.html">Plans</a></li>
+      <li><a href="tools.html" class="active">Tools</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Useful Minecraft Tools</h1>
+    <section class="tool-cards">
+      ${[
+        {name:"MOTD Generator",desc:"Create a custom Minecraft MOTD",link:"motd.html"},
+        {name:"Coordinate Calculator",desc:"Teleport & coordinate math",link:"coordinates.html"},
+        {name:"Skin Grabber",desc:"Get any player’s skin",link:"skin.html"},
+        {name:"Enchantment Calculator",desc:"Find optimal enchant setups",link:"enchant.html"},
+        {name:"Resource Calculator",desc:"Count blocks & resources",link:"resource.html"},
+        {name:"Circle Generator",desc:"Make pixel-perfect circles",link:"circle.html"},
+        {name:"Tick Calculator",desc:"Convert ticks to time",link:"ticks.html"},
+        {name:"Map Generator",desc:"Generate Minecraft maps",link:"map.html"},
+      ].map(t=>`
+      <a href="${t.link}" class="tool-card">
+        <h2>${t.name}</h2>
+        <p>${t.desc}</p>
+      </a>`).join('')}
+    </section>
   </main>
-
-  <script>
-    window.onload = () => {
-      document.querySelector('.loader-container').style.display = 'none';
-    };
-  </script>
 </body>
 </html>
