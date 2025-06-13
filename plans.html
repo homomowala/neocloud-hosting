@@ -1,41 +1,120 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-black text-white">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NEOCLOUD | Plans</title>
-  <link href="main.css" rel="stylesheet">
+  <title>NEOCLOUD Plans</title>
+  <link rel="stylesheet" href="main.css" />
+  <style>
+    body {
+      background: linear-gradient(to bottom, #1a002d, #000);
+      color: #fff;
+      font-family: monospace;
+      padding: 2rem 1rem;
+    }
+    header {
+      background: #260042;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    header img {
+      height: 32px;
+    }
+    nav a {
+      color: #ff9cfc;
+      margin: 0 0.8rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: white;
+    }
+    h1 {
+      text-align: center;
+      color: #c56aff;
+      font-size: 2.2rem;
+    }
+    .plan {
+      background: #2c0052;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 600px;
+      box-shadow: 0 0 12px #c48cff44;
+    }
+    .plan h3 {
+      color: #ff98ff;
+    }
+    .plan p {
+      margin: 0.3rem 0;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.6rem; }
+      .plan { margin: 1rem 0.5rem; }
+    }
+  </style>
 </head>
-<body class="font-press-start">
-  <div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
-    <div class="loader"></div>
-    <p class="ml-4 text-purple-300">Loading...</p>
+<body>
+
+  <header>
+    <img src="logo.png" alt="NEOCLOUD Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="plans.html">Plans</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+  </header>
+
+  <h1>🟣 NEOCLOUD CHEAP MC SERVER PLAN</h1>
+  <p style="text-align:center; color:#c0a0ff;">Processor: Intel Xeon</p>
+
+  <div class="plan">
+    <h3>PLAN 1</h3>
+    <p>💾 RAM: 2GB</p>
+    <p>⚙️ CPU: 80%</p>
+    <p>📦 Disk: 5GB</p>
+    <p>💰 Price: ₹40 INR</p>
   </div>
 
-  <nav class="flex justify-between items-center px-6 py-4 bg-black border-b border-purple-500">
-    <img src="logo.png" alt="NEOCLOUD" class="h-8" />
-    <div class="space-x-4 text-sm">
-      <a href="index.html" class="hover:text-purple-400">Home</a>
-      <a href="plans.html" class="text-purple-400 underline">Plans</a>
-      <a href="tools.html" class="hover:text-purple-400">Tools</a>
-    </div>
-  </nav>
+  <div class="plan">
+    <h3>PLAN 2</h3>
+    <p>RAM: 4GB | CPU: 120% | Disk: 10GB | Price: ₹80 INR</p>
+  </div>
 
-  <section class="text-center mt-16 px-6">
-    <h2 class="text-3xl text-purple-300 mb-6">NEOCLOUD Cheap MC Server Plans</h2>
-    <p class="mb-4 text-sm text-gray-400">Processor: Intel Xeon ⚙️</p>
-    <div class="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
-      <div class="plan-card">PLAN 1<br>2GB RAM, 80% CPU, 5GB DISK – ₹40</div>
-      <div class="plan-card">PLAN 2<br>4GB RAM, 120% CPU, 10GB DISK – ₹80</div>
-      <div class="plan-card">PLAN 3<br>6GB RAM, 150% CPU, 15GB DISK – ₹120</div>
-      <div class="plan-card">PLAN 4<br>8GB RAM, 200% CPU, 20GB DISK – ₹160</div>
-      <div class="plan-card">PLAN 6<br>10GB RAM, 250% CPU, 22GB DISK – ₹250</div>
-      <div class="plan-card">PLAN 7<br>12GB RAM, 300% CPU, 25GB DISK – ₹350</div>
-      <div class="plan-card">PLAN 8<br>16GB RAM, 350% CPU, 30GB DISK – ₹450</div>
-      <div class="plan-card">PLAN 9<br>∞ RAM, ∞ CPU, ∞ DISK – ₹999</div>
-    </div>
-  </section>
+  <div class="plan">
+    <h3>PLAN 3</h3>
+    <p>RAM: 6GB | CPU: 150% | Disk: 15GB | Price: ₹120 INR</p>
+  </div>
 
-  <script>setTimeout(() => document.getElementById('loader').style.display = 'none', 2000);</script>
+  <div class="plan">
+    <h3>PLAN 4</h3>
+    <p>RAM: 8GB | CPU: 200% | Disk: 20GB | Price: ₹160 INR</p>
+  </div>
+
+  <div class="plan">
+    <h3>PLAN 6</h3>
+    <p>RAM: 10GB | CPU: 250% | Disk: 22GB | Price: ₹250 INR</p>
+  </div>
+
+  <div class="plan">
+    <h3>PLAN 7</h3>
+    <p>RAM: 12GB | CPU: 300% | Disk: 25GB | Price: ₹350 INR</p>
+  </div>
+
+  <div class="plan">
+    <h3>PLAN 8</h3>
+    <p>RAM: 16GB | CPU: 350% | Disk: 30GB | Price: ₹450 INR</p>
+  </div>
+
+  <div class="plan">
+    <h3>PLAN 9 (Ultimate)</h3>
+    <p>☄️ RAM: Infinite</p>
+    <p>⚡ CPU: Infinite</p>
+    <p>📁 Disk: Infinite</p>
+    <p>💰 Price: ₹999 INR</p>
+  </div>
+
 </body>
 </html>
