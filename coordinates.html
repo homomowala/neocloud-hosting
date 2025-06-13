@@ -1,62 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Coordinate Calculator - NEOCLOUD</title>
-  <link rel="stylesheet" href="main.css">
-  <style>
-    body {
-      background: #1e0033;
-      color: white;
-      font-family: monospace;
-      padding: 2rem;
-    }
-    input {
-      margin: 0.5rem 0;
-      padding: 0.5rem;
-      width: 100%;
-      background: #2b0051;
-      color: white;
-      border: none;
-      border-radius: 8px;
-    }
-    .output {
-      margin-top: 1rem;
-      background: #370066;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-  </style>
+  <link rel="stylesheet" href="main.css"/>
 </head>
 <body>
-
-  <h1>📍 Coordinate Calculator</h1>
-  <p>Convert Overworld ↔ Nether coords easily!</p>
-  <input type="number" id="x" placeholder="Enter X coordinate">
-  <input type="number" id="z" placeholder="Enter Z coordinate">
-  <div class="output" id="result"></div>
-
+  <nav class="navbar">NEOCLOUD</nav>
+  <main class="tool">
+    <h1>Coordinate Calculator</h1>
+    <label>Overworld X: <input id="x"/></label>
+    <label>Overworld Z: <input id="z"/></label>
+    <button onclick="calcCoords()">Convert</button>
+    <p id="netherCoords"></p>
+  </main>
   <script>
-    const xInput = document.getElementById('x');
-    const zInput = document.getElementById('z');
-    const result = document.getElementById('result');
-
-    function update() {
-      const x = parseFloat(xInput.value);
-      const z = parseFloat(zInput.value);
-      if (!isNaN(x) && !isNaN(z)) {
-        result.innerHTML = `
-          <b>Nether:</b> (${(x / 8).toFixed(2)}, ${(z / 8).toFixed(2)})<br>
-          <b>Overworld:</b> (${(x * 8).toFixed(2)}, ${(z * 8).toFixed(2)})
-        `;
-      } else {
-        result.innerText = 'Enter valid numbers';
-      }
+    function calcCoords() {
+      const x = parseFloat(document.getElementById("x").value);
+      const z = parseFloat(document.getElementById("z").value);
+      document.getElementById("netherCoords").innerText = `Nether: (${x/8}, ${z/8})`;
     }
-
-    xInput.addEventListener('input', update);
-    zInput.addEventListener('input', update);
   </script>
-
 </body>
 </html>
