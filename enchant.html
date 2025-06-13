@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enchantment Calculator - NEOCLOUD</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    body {
+      background: #1e0033;
+      color: white;
+      font-family: monospace;
+      padding: 2rem;
+    }
+    select, input {
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      background: #2b0051;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+    }
+    .output {
+      margin-top: 1rem;
+      background: #370066;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✨ Enchantment Calculator</h1>
+  <p>Select level to see enchantment chance range (Java Edition).</p>
+  <input type="number" id="level" min="1" max="30" placeholder="Enter level 1–30">
+  <div class="output" id="chance"></div>
+
+  <script>
+    const levelInput = document.getElementById('level');
+    const output = document.getElementById('chance');
+
+    levelInput.addEventListener('input', () => {
+      const level = parseInt(levelInput.value);
+      if (!isNaN(level) && level >= 1 && level <= 30) {
+        const base = level;
+        const min = Math.floor(base * 1.0);
+        const max = Math.floor(base * 1.5 + 1);
+        output.innerHTML = \`📖 Enchantability: \${min} - \${max}\`;
+      } else {
+        output.innerText = 'Level must be 1–30';
+      }
+    });
+  </script>
+
+</body>
+</html>
