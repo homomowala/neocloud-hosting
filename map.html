@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Map Generator - NEOCLOUD</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    body {
+      background: #1e0033;
+      color: white;
+      font-family: monospace;
+      text-align: center;
+      padding: 2rem;
+    }
+    input {
+      width: 80%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      background: #2b0051;
+      color: white;
+      border: none;
+      border-radius: 6px;
+    }
+    img {
+      margin-top: 1rem;
+      border-radius: 8px;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🗺 Map Seed Viewer</h1>
+  <p>Enter any Minecraft seed (Java Edition)</p>
+  <input type="text" id="seed" placeholder="Enter seed...">
+  <div id="mapPreview"></div>
+
+  <script>
+    const input = document.getElementById('seed');
+    const mapPreview = document.getElementById('mapPreview');
+
+    input.addEventListener('input', () => {
+      const seed = input.value.trim();
+      if (seed.length > 0) {
+        mapPreview.innerHTML = \`
+          <img src="https://mcseedmap.net/map.php?seed=\${encodeURIComponent(seed)}" alt="Map preview for \${seed}">
+        \`;
+      } else {
+        mapPreview.innerHTML = '';
+      }
+    });
+  </script>
+
+</body>
+</html>
