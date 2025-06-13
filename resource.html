@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Resource Calculator</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="navbar"><a href="tools.html">← Back</a></div>
+  <section class="tool-section">
+    <h1>Resource Calculator</h1>
+    <p>Enter item count to calculate resource stacks.</p>
+    <input type="number" id="items" placeholder="Total Items">
+    <button onclick="calc()">Calculate</button>
+    <p id="stacks"></p>
+  </section>
+  <script>
+    function calc() {
+      const total = parseInt(document.getElementById("items").value);
+      const stacks = Math.floor(total / 64);
+      const leftover = total % 64;
+      document.getElementById("stacks").innerText = `${stacks} stacks + ${leftover} items`;
+    }
+  </script>
+</body>
+</html>
