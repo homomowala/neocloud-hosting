@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Map Generator</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css" />
 </head>
-<body>
-  <div class="navbar"><a href="tools.html">← Back</a></div>
-  <section class="tool-section">
-    <h1>Map Generator</h1>
-    <p>Open Minecraft map viewer and seed tool.</p>
-    <a href="https://www.chunkbase.com/apps/seed-map" target="_blank">
-      Launch Map Generator
-    </a>
-  </section>
+<body class="tool-bg">
+  <header class="navbar"><img src="logo.png" class="logo" /><nav><a href="index.html">Home</a><a href="plans.html">Plans</a><a class="active" href="tools.html">Tools</a></nav></header>
+  <main class="tool-main">
+    <h1 class="tool-title">🗺️ Map Generator</h1>
+    <p class="tool-desc">Generate map properties based on scale and center coordinates.</p>
+    <input type="number" id="centerX" placeholder="Center X" class="tool-input" />
+    <input type="number" id="centerZ" placeholder="Center Z" class="tool-input" />
+    <select id="scale" class="tool-input">
+      <option value="0">1:1</option>
+      <option value="1">1:2</option>
+      <option value="2">1:4</option>
+      <option value="3">1:8</option>
+      <option value="4">1:16</option>
+    </select>
+    <button onclick="generateMap()" class="tool-btn">Generate</button>
+    <p id="mapResult" class="tool-output"></p>
+  </main>
+  <script>
+    function generateMap() {
+      const x = parseInt(document.getElementById("centerX").value);
+      const z = parseInt(document.getElementById("centerZ").value);
+      const scale = parseInt(document.getElementById("scale").value);
+      const size = 128 * Math.pow(2, scale);
+      document.getElementById("mapResult").innerText = 
+        `Map size: ${size}x${size}\nCovers X: ${x - size/2} to ${x + size/2}\nZ: ${z - size/2} to ${z + size/2}`;
+    }
+  </script>
 </body>
 </html>
