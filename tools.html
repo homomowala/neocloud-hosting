@@ -1,58 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NEOCLOUD Tools</title>
-  <link href="main.css" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
   <style>
     body {
-      background: linear-gradient(to bottom right, #1b001f, #3f0071);
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background: linear-gradient(to bottom, #1b0030, #000);
       color: white;
-      font-family: 'Arial', sans-serif;
-      padding: 2rem;
+    }
+    header {
+      background: #260042;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1.2rem;
+    }
+    header img {
+      height: 28px;
+    }
+    nav a {
+      color: #ff9cfc;
+      margin-left: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #fff;
     }
     h1 {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-      color: #b86bff;
+      text-align: center;
+      margin: 2rem 1rem 1rem;
+      font-size: 2rem;
+      color: #ffb2ff;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      padding: 1rem 2rem;
+      max-width: 1100px;
+      margin: auto;
     }
-    li a {
-      display: block;
-      margin: 0.8rem 0;
-      padding: 1rem;
-      background: #2b0051;
-      border: 1px solid #6a00ff;
-      border-radius: 0.75rem;
-      text-decoration: none;
-      color: white;
+    .tool {
+      background: #32004d;
+      border-radius: 12px;
+      padding: 1.2rem;
+      box-shadow: 0 0 12px #c480ff50;
+      text-align: center;
       transition: 0.3s ease;
     }
-    li a:hover {
-      background: #48008c;
-      box-shadow: 0 0 15px #a64dff;
+    .tool:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 16px #ff9cfcaa;
+    }
+    .tool h3 {
+      margin-bottom: 0.6rem;
+      color: #ffd6ff;
+    }
+    .tool a {
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .tool a:hover {
+      color: #ff9cfc;
+    }
+    @media (max-width: 600px) {
+      .tools-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="NEOCLOUD Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="plans.html">Plans</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+  </header>
 
-  <h1>🔧 NEOCLOUD Minecraft Tools</h1>
+  <h1>🛠️ NEOCLOUD Tools</h1>
 
-  <ul>
-    <li><a href="motd.html">🎨 MOTD Editor</a></li>
-    <li><a href="coordinates.html">📍 Coordinate Calculator</a></li>
-    <li><a href="skin.html">🧑 Skin Grabber</a></li>
-    <li><a href="enchant.html">✨ Enchantment Calculator</a></li>
-    <li><a href="resource.html">🪓 Resource Calculator</a></li>
-    <li><a href="circle.html">⭕ Circle Generator</a></li>
-    <li><a href="tick.html">⏱ Tick Calculator</a></li>
-    <li><a href="map.html">🗺 Map Generator</a></li>
-  </ul>
-
+  <div class="tools-grid">
+    <div class="tool"><h3>MOTD Generator</h3><a href="motd.html">Open Tool</a></div>
+    <div class="tool"><h3>Coordinate Calculator</h3><a href="coordinates.html">Open Tool</a></div>
+    <div class="tool"><h3>Skin Grabber</h3><a href="skin.html">Open Tool</a></div>
+    <div class="tool"><h3>Enchantment Calculator</h3><a href="enchantments.html">Open Tool</a></div>
+    <div class="tool"><h3>Resource Calculator</h3><a href="resources.html">Open Tool</a></div>
+    <div class="tool"><h3>Circle Generator</h3><a href="circle.html">Open Tool</a></div>
+    <div class="tool"><h3>Tick Calculator</h3><a href="tick.html">Open Tool</a></div>
+    <div class="tool"><h3>Map Generator</h3><a href="map.html">Open Tool</a></div>
+  </div>
 </body>
 </html>
