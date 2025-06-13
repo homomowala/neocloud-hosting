@@ -1,53 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-black text-white">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NEOCLOUD | Plans</title>
-  <link rel="stylesheet" href="main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
 </head>
-<body>
-  <div id="loader" class="loader-screen">
-    <div class="dual-loader">
-      <div class="circle outer"></div>
-      <div class="circle inner"></div>
-      <p>Loading...</p>
-    </div>
+<body class="font-press-start">
+  <div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+    <div class="loader"></div>
+    <p class="ml-4 text-purple-300">Loading...</p>
   </div>
 
-  <header class="navbar">
-    <img src="assets/logo.png" alt="Logo" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="plans.html">Plans</a>
-      <a href="tools.html">Tools</a>
-    </nav>
-  </header>
+  <nav class="flex justify-between items-center px-6 py-4 bg-black border-b border-purple-500">
+    <img src="logo.png" alt="NEOCLOUD" class="h-8" />
+    <div class="space-x-4 text-sm">
+      <a href="index.html" class="hover:text-purple-400">Home</a>
+      <a href="plans.html" class="text-purple-400 underline">Plans</a>
+      <a href="tools.html" class="hover:text-purple-400">Tools</a>
+    </div>
+  </nav>
 
-  <main class="plans">
-    <h2 class="arcade-glow">Minecraft Hosting Plans</h2>
-    <div class="plan-card">
-      <h3>Starter</h3>
-      <p>1 GB RAM • 1 vCPU</p>
-      <p>$3/month</p>
+  <section class="text-center mt-16 px-6">
+    <h2 class="text-3xl text-purple-300 mb-6">NEOCLOUD Cheap MC Server Plans</h2>
+    <p class="mb-4 text-sm text-gray-400">Processor: Intel Xeon ⚙️</p>
+    <div class="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+      <div class="plan-card">PLAN 1<br>2GB RAM, 80% CPU, 5GB DISK – ₹40</div>
+      <div class="plan-card">PLAN 2<br>4GB RAM, 120% CPU, 10GB DISK – ₹80</div>
+      <div class="plan-card">PLAN 3<br>6GB RAM, 150% CPU, 15GB DISK – ₹120</div>
+      <div class="plan-card">PLAN 4<br>8GB RAM, 200% CPU, 20GB DISK – ₹160</div>
+      <div class="plan-card">PLAN 6<br>10GB RAM, 250% CPU, 22GB DISK – ₹250</div>
+      <div class="plan-card">PLAN 7<br>12GB RAM, 300% CPU, 25GB DISK – ₹350</div>
+      <div class="plan-card">PLAN 8<br>16GB RAM, 350% CPU, 30GB DISK – ₹450</div>
+      <div class="plan-card">PLAN 9<br>∞ RAM, ∞ CPU, ∞ DISK – ₹999</div>
     </div>
-    <div class="plan-card">
-      <h3>Standard</h3>
-      <p>2 GB RAM • 2 vCPU</p>
-      <p>$6/month</p>
-    </div>
-    <div class="plan-card">
-      <h3>Pro</h3>
-      <p>4 GB RAM • 3 vCPU</p>
-      <p>$10/month</p>
-    </div>
-  </main>
+  </section>
 
-  <script>
-    setTimeout(() => {
-      document.getElementById("loader").style.display = "none";
-    }, 2000);
-  </script>
+  <script>setTimeout(() => document.getElementById('loader').style.display = 'none', 2000);</script>
 </body>
 </html>
