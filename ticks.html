@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tick Calculator – NEOCLOUD</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-circle"></div>
+    <div id="loader-text">Loading...</div>
+  </div>
+
+  <div class="navbar">
+    <img src="logo.png" alt="NEOCLOUD Logo">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="plans.html">Plans</a>
+      <a href="tools.html" class="active">Tools</a>
+    </div>
+  </div>
+
+  <section class="tool-section">
+    <h1>Tick Calculator</h1>
+    <p>Minecraft runs at 20 ticks per second. Use this tool to convert ticks to real-world time.</p>
+
+    <div class="tool-form">
+      <label for="ticks">Enter Ticks:</label>
+      <input type="number" id="ticks" placeholder="e.g., 100" />
+      <button onclick="convertTicks()">Convert</button>
+      <p id="result"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 NEOCLOUD. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function convertTicks() {
+      const ticks = parseInt(document.getElementById('ticks').value);
+      if (isNaN(ticks)) {
+        document.getElementById('result').innerText = 'Please enter a valid number.';
+        return;
+      }
+      const seconds = ticks / 20;
+      document.getElementById('result').innerText = `${ticks} ticks = ${seconds} seconds`;
+    }
+  </script>
+</body>
+</html>
