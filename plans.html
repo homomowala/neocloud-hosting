@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NEOCLOUD | Server Plans</title>
-  <link rel="stylesheet" href="main.css"/>
+  <link rel="stylesheet" href="main.css" />
   <script>
+    // Hide loader after page loads
+    window.addEventListener("load", () => {
+      document.querySelector(".loader").style.display = "none";
+    });
+
     function addToCart(plan) {
       alert(plan + " added to cart!");
     }
+
     function buyNow() {
       window.location.href = "https://discord.gg/j9nAs6WsNb";
     }
   </script>
 </head>
 <body>
-  <div class="loader"><div></div><div></div><p>Loading...</p></div>
+  <div class="loader">
+    <div></div>
+    <div></div>
+    <p>Loading...</p>
+  </div>
+
   <nav>
     <img src="logo.png" alt="NEOCLOUD Logo" class="logo"/>
     <ul>
@@ -26,107 +37,88 @@
   </nav>
 
   <main>
-    <h1>NEOCLOUD Server Plans</h1>
-    <p class="subtitle">Choose the best plan that fits your server needs. Powerful, affordable, and scalable for any community.</p>
+    <h1 style="text-align: center; padding: 1.5em 1em 0.5em;">Choose Your Minecraft Server Plan</h1>
+    <p style="text-align: center; color: #ccc; max-width: 700px; margin: 0 auto 2em;">All plans come with full DDoS protection, instant setup, Pterodactyl panel, and Discord support.</p>
     <section class="plans">
+      <!-- Plan cards -->
       <div class="plan-card">
-        <h2>Plan 1</h2>
+        <h2>Basic</h2>
         <p><strong>RAM:</strong> 2GB</p>
-        <p><strong>CPU:</strong> 80%</p>
+        <p><strong>CPU:</strong> 40%</p>
         <p><strong>Disk:</strong> 5GB SSD</p>
-        <p><strong>Price:</strong> ₹40</p>
+        <p><strong>Price:</strong> ₹40/mo</p>
         <button onclick="buyNow()">Buy Now</button>
-        <button onclick="addToCart('Plan 1')">Add to Cart</button>
+        <button onclick="addToCart('Basic')">Add to Cart</button>
       </div>
 
       <div class="plan-card">
-        <h2>Plan 2</h2>
+        <h2>Starter</h2>
         <p><strong>RAM:</strong> 4GB</p>
-        <p><strong>CPU:</strong> 120%</p>
-        <p><strong>Disk:</strong> 10GB SSD</p>
-        <p><strong>Price:</strong> ₹80</p>
+        <p><strong>CPU:</strong> 80%</p>
+        <p><strong>Disk:</strong> 7GB SSD</p>
+        <p><strong>Price:</strong> ₹80/mo</p>
         <button onclick="buyNow()">Buy Now</button>
-        <button onclick="addToCart('Plan 2')">Add to Cart</button>
+        <button onclick="addToCart('Starter')">Add to Cart</button>
       </div>
 
       <div class="plan-card">
-        <h2>Plan 3</h2>
+        <h2>Standard</h2>
         <p><strong>RAM:</strong> 6GB</p>
-        <p><strong>CPU:</strong> 150%</p>
-        <p><strong>Disk:</strong> 15GB SSD</p>
-        <p><strong>Price:</strong> ₹120</p>
+        <p><strong>CPU:</strong> 120%</p>
+        <p><strong>Disk:</strong> 9GB SSD</p>
+        <p><strong>Price:</strong> ₹120/mo</p>
         <button onclick="buyNow()">Buy Now</button>
-        <button onclick="addToCart('Plan 3')">Add to Cart</button>
+        <button onclick="addToCart('Standard')">Add to Cart</button>
       </div>
 
       <div class="plan-card">
-        <h2>Plan 4</h2>
+        <h2>Pro</h2>
         <p><strong>RAM:</strong> 8GB</p>
-        <p><strong>CPU:</strong> 200%</p>
-        <p><strong>Disk:</strong> 20GB SSD</p>
-        <p><strong>Price:</strong> ₹160</p>
+        <p><strong>CPU:</strong> 160%</p>
+        <p><strong>Disk:</strong> 11GB SSD</p>
+        <p><strong>Price:</strong> ₹160/mo</p>
         <button onclick="buyNow()">Buy Now</button>
-        <button onclick="addToCart('Plan 4')">Add to Cart</button>
+        <button onclick="addToCart('Pro')">Add to Cart</button>
       </div>
 
       <div class="plan-card">
-        <h2>Plan 5</h2>
-        <p><strong>RAM:</strong> 9GB</p>
-        <p><strong>CPU:</strong> 220%</p>
-        <p><strong>Disk:</strong> 21GB SSD</p>
-        <p><strong>Price:</strong> ₹200</p>
-        <button onclick="buyNow()">Buy Now</button>
-        <button onclick="addToCart('Plan 5')">Add to Cart</button>
-      </div>
-
-      <div class="plan-card">
-        <h2>Plan 6</h2>
+        <h2>Advanced</h2>
         <p><strong>RAM:</strong> 10GB</p>
-        <p><strong>CPU:</strong> 250%</p>
-        <p><strong>Disk:</strong> 22GB SSD</p>
-        <p><strong>Price:</strong> ₹250</p>
+        <p><strong>CPU:</strong> 200%</p>
+        <p><strong>Disk:</strong> 13GB SSD</p>
+        <p><strong>Price:</strong> ₹200/mo</p>
         <button onclick="buyNow()">Buy Now</button>
-        <button onclick="addToCart('Plan 6')">Add to Cart</button>
+        <button onclick="addToCart('Advanced')">Add to Cart</button>
       </div>
 
       <div class="plan-card">
-        <h2>Plan 7</h2>
+        <h2>Pro Max</h2>
         <p><strong>RAM:</strong> 12GB</p>
-        <p><strong>CPU:</strong> 300%</p>
-        <p><strong>Disk:</strong> 25GB SSD</p>
-        <p><strong>Price:</strong> ₹350</p>
+        <p><strong>CPU:</strong> 240%</p>
+        <p><strong>Disk:</strong> 15GB SSD</p>
+        <p><strong>Price:</strong> ₹240/mo</p>
         <button onclick="buyNow()">Buy Now</button>
-        <button onclick="addToCart('Plan 7')">Add to Cart</button>
+        <button onclick="addToCart('Pro Max')">Add to Cart</button>
       </div>
 
       <div class="plan-card">
-        <h2>Plan 8</h2>
+        <h2>Ultra</h2>
         <p><strong>RAM:</strong> 16GB</p>
-        <p><strong>CPU:</strong> 350%</p>
-        <p><strong>Disk:</strong> 30GB SSD</p>
-        <p><strong>Price:</strong> ₹450</p>
+        <p><strong>CPU:</strong> 300%</p>
+        <p><strong>Disk:</strong> 20GB SSD</p>
+        <p><strong>Price:</strong> ₹300/mo</p>
         <button onclick="buyNow()">Buy Now</button>
-        <button onclick="addToCart('Plan 8')">Add to Cart</button>
+        <button onclick="addToCart('Ultra')">Add to Cart</button>
       </div>
 
       <div class="plan-card">
-        <h2>Plan 9</h2>
-        <p><strong>RAM:</strong> 24GB</p>
-        <p><strong>CPU:</strong> 400%</p>
-        <p><strong>Disk:</strong> 40GB SSD</p>
-        <p><strong>Price:</strong> ₹700</p>
+        <h2>Unlimited</h2>
+        <p><strong>RAM:</strong> ∞</p>
+        <p><strong>CPU:</strong> ∞</p>
+        <p><strong>Disk:</strong> ∞</p>
+        <p><strong>Price:</strong> ₹∞</p>
         <button onclick="buyNow()">Buy Now</button>
-        <button onclick="addToCart('Plan 9')">Add to Cart</button>
-      </div>
-
-      <div class="plan-card">
-        <h2>Plan 10 (Ultimate)</h2>
-        <p><strong>RAM:</strong> Infinite</p>
-        <p><strong>CPU:</strong> Infinite</p>
-        <p><strong>Disk:</strong> Infinite</p>
-        <p><strong>Price:</strong> ₹999</p>
-        <button onclick="buyNow()">Buy Now</button>
-        <button onclick="addToCart('Plan 10')">Add to Cart</button>
+        <button onclick="addToCart('Unlimited')">Add to Cart</button>
       </div>
     </section>
   </main>
