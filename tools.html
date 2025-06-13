@@ -1,40 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-black text-white">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NEOCLOUD | Tools</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEOCLOUD Tools</title>
   <link href="main.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #1b001f, #3f0071);
+      color: white;
+      font-family: 'Arial', sans-serif;
+      padding: 2rem;
+    }
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: #b86bff;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li a {
+      display: block;
+      margin: 0.8rem 0;
+      padding: 1rem;
+      background: #2b0051;
+      border: 1px solid #6a00ff;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s ease;
+    }
+    li a:hover {
+      background: #48008c;
+      box-shadow: 0 0 15px #a64dff;
+    }
+  </style>
 </head>
-<body class="font-press-start">
-  <div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
-    <div class="loader"></div>
-    <p class="ml-4 text-purple-300">Loading...</p>
-  </div>
+<body>
 
-  <nav class="flex justify-between items-center px-6 py-4 bg-black border-b border-purple-500">
-    <img src="logo.png" alt="NEOCLOUD" class="h-8" />
-    <div class="space-x-4 text-sm">
-      <a href="index.html" class="hover:text-purple-400">Home</a>
-      <a href="plans.html" class="hover:text-purple-400">Plans</a>
-      <a href="tools.html" class="text-purple-400 underline">Tools</a>
-    </div>
-  </nav>
+  <h1>🔧 NEOCLOUD Minecraft Tools</h1>
 
-  <section class="text-center mt-16 px-6">
-    <h2 class="text-3xl text-purple-300 mb-6">NEOCLOUD Minecraft Tools</h2>
-    <div class="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto text-sm">
-      <a href="motd-editor.html" class="tool-link">MOTD Editor</a>
-      <a href="coordinate-calculator.html" class="tool-link">Coordinate Calculator</a>
-      <a href="skin-grabber.html" class="tool-link">Skin Grabber</a>
-      <a href="enchantment-calculator.html" class="tool-link">Enchantment Calculator</a>
-      <a href="resource-calculator.html" class="tool-link">Resource Calculator</a>
-      <a href="circle-generator.html" class="tool-link">Circle Generator</a>
-      <a href="tick-calculator.html" class="tool-link">Tick Calculator</a>
-      <a href="map-generator.html" class="tool-link">Map Generator</a>
-    </div>
-  </section>
+  <ul>
+    <li><a href="motd.html">🎨 MOTD Editor</a></li>
+    <li><a href="coordinates.html">📍 Coordinate Calculator</a></li>
+    <li><a href="skin.html">🧑 Skin Grabber</a></li>
+    <li><a href="enchant.html">✨ Enchantment Calculator</a></li>
+    <li><a href="resource.html">🪓 Resource Calculator</a></li>
+    <li><a href="circle.html">⭕ Circle Generator</a></li>
+    <li><a href="tick.html">⏱ Tick Calculator</a></li>
+    <li><a href="map.html">🗺 Map Generator</a></li>
+  </ul>
 
-  <script>setTimeout(() => document.getElementById('loader').style.display = 'none', 2000);</script>
 </body>
 </html>
