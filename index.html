@@ -2,61 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NEOCLOUD - Mythical Hosting</title>
-  <link rel="stylesheet" href="main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEOCLOUD | Mythical Hosting</title>
+  <link rel="stylesheet" href="main.css"/>
 </head>
 <body>
-  <!-- Loader -->
-  <div class="loader-wrapper" id="loader">
-    <div class="loader"></div>
-    <div class="loader-text">Loading...</div>
-  </div>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <img src="logo.png" alt="Logo" class="logo" />
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+  <div class="loader"><div></div><div></div><p>Loading...</p></div>
+  <nav>
+    <img src="logo.png" alt="NEOCLOUD Logo" class="logo"/>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="plans.html">Plans</a></li>
       <li><a href="tools.html">Tools</a></li>
+      <li><a href="https://discord.gg/j9nAs6WsNb" target="_blank" class="discord-btn">Join Discord</a></li>
     </ul>
-    <a href="#" class="discord-btn">Join NEOCLOUD Discord</a>
   </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>NEOCLOUD</h1>
-    <p>The Mythical Minecraft Server Hosting You Deserve</p>
-    <a href="plans.html" class="btn">View Hosting Plans</a>
-  </section>
-
-  <section class="features">
-    <h2>Why Choose NEOCLOUD?</h2>
-    <ul>
-      <li>⚡ Instant Setup</li>
-      <li>🛡️ DDoS Protection</li>
-      <li>💸 Affordable Prices</li>
-      <li>🌐 Global Reach</li>
-      <li>🎮 Custom Minecraft Tools</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 NEOCLOUD Hosting. All rights reserved.</p>
-  </footer>
-
-  <!-- Loader Script -->
-  <script>
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        const loader = document.getElementById("loader");
-        if (loader) {
-          loader.style.opacity = "0";
-          setTimeout(() => loader.remove(), 500);
-        }
-      }, 2000);
-    });
-  </script>
+  <header>
+    <h1>Welcome to <span>NEOCLOUD</span></h1>
+    <p>The most mythical, affordable Minecraft hosting service.</p>
+    <a href="plans.html" class="btn">Explore Plans</a>
+  </header>
 </body>
 </html>
