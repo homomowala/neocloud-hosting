@@ -1,103 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NEOCLOUD Tools</title>
   <link rel="stylesheet" href="main.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Courier New', monospace;
-      background: linear-gradient(to bottom, #1b0030, #000);
-      color: white;
-    }
-    header {
-      background: #260042;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.8rem 1.2rem;
-    }
-    header img {
-      height: 28px;
-    }
-    nav a {
-      color: #ff9cfc;
-      margin-left: 1rem;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-    h1 {
-      text-align: center;
-      margin: 2rem 1rem 1rem;
-      font-size: 2rem;
-      color: #ffb2ff;
-    }
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      padding: 1rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .tool {
-      background: #32004d;
-      border-radius: 12px;
-      padding: 1.2rem;
-      box-shadow: 0 0 12px #c480ff50;
-      text-align: center;
-      transition: 0.3s ease;
-    }
-    .tool:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 16px #ff9cfcaa;
-    }
-    .tool h3 {
-      margin-bottom: 0.6rem;
-      color: #ffd6ff;
-    }
-    .tool a {
-      color: #ffffff;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .tool a:hover {
-      color: #ff9cfc;
-    }
-    @media (max-width: 600px) {
-      .tools-grid {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-      }
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="NEOCLOUD Logo" />
-    <nav>
+  <div id="loader">
+    <div class="loader-circle"></div>
+    <div id="loader-text">Loading...</div>
+  </div>
+
+  <div class="navbar">
+    <img src="logo.png" alt="NEOCLOUD Logo">
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="plans.html">Plans</a>
-      <a href="tools.html">Tools</a>
-    </nav>
-  </header>
-
-  <h1>🛠️ NEOCLOUD Tools</h1>
-
-  <div class="tools-grid">
-    <div class="tool"><h3>MOTD Generator</h3><a href="motd.html">Open Tool</a></div>
-    <div class="tool"><h3>Coordinate Calculator</h3><a href="coordinates.html">Open Tool</a></div>
-    <div class="tool"><h3>Skin Grabber</h3><a href="skin.html">Open Tool</a></div>
-    <div class="tool"><h3>Enchantment Calculator</h3><a href="enchantments.html">Open Tool</a></div>
-    <div class="tool"><h3>Resource Calculator</h3><a href="resources.html">Open Tool</a></div>
-    <div class="tool"><h3>Circle Generator</h3><a href="circle.html">Open Tool</a></div>
-    <div class="tool"><h3>Tick Calculator</h3><a href="tick.html">Open Tool</a></div>
-    <div class="tool"><h3>Map Generator</h3><a href="map.html">Open Tool</a></div>
+      <a href="tools.html" class="active">Tools</a>
+    </div>
   </div>
+
+  <section class="tools">
+    <h1>NEOCLOUD Minecraft Tools</h1>
+    <p>Helpful utilities to enhance your Minecraft server experience.</p>
+
+    <div class="tool-grid">
+      <a href="motd.html" class="tool-card">
+        <h2>MOTD Generator</h2>
+        <p>Create custom server MOTD text with color codes and formatting.</p>
+      </a>
+
+      <a href="coords.html" class="tool-card">
+        <h2>Coordinate Calculator</h2>
+        <p>Convert Minecraft coordinates for Nether/Overworld travel.</p>
+      </a>
+
+      <a href="skin.html" class="tool-card">
+        <h2>Skin Grabber</h2>
+        <p>View and download skins by entering a Minecraft username.</p>
+      </a>
+
+      <a href="enchant.html" class="tool-card">
+        <h2>Enchantment Calculator</h2>
+        <p>Determine the best enchantments based on item type and XP level.</p>
+      </a>
+
+      <a href="resource.html" class="tool-card">
+        <h2>Resource Calculator</h2>
+        <p>Calculate how many items you need for crafting or building.</p>
+      </a>
+
+      <a href="circle.html" class="tool-card">
+        <h2>Circle Generator</h2>
+        <p>Create circular shapes using blocks for pixel-art and structures.</p>
+      </a>
+
+      <a href="ticks.html" class="tool-card">
+        <h2>Tick Calculator</h2>
+        <p>Convert Minecraft ticks to seconds and understand timings.</p>
+      </a>
+
+      <a href="map.html" class="tool-card">
+        <h2>Map Generator</h2>
+        <p>Generate custom maps with seeds, biomes, and filters.</p>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 NEOCLOUD. All rights reserved.</p>
+  </footer>
 </body>
 </html>
